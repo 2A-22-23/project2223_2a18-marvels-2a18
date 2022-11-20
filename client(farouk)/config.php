@@ -1,5 +1,5 @@
 <?php
-
+//farouk 
 class config
 {
     private static $pdo = null;

@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+body {
+  background: url("./letter-bg.png") no-repeat;
+  background-size: cover;
+  color: rgb(104, 20, 20);
+}
+.inscription-form {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+}
+.inscription-form h1 {
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+.inscription-form p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+.inscription-form input {
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 70%;
+    border-radius: 5px ;
+    border-color:rgb(36, 13, 13);
+    outline: none;
+  }
+  .inscription-form button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width:50% ;
+    border: 0;
+    border-radius: 5px;
+    background-color:red;
+    
+  }
+  .inscription-form button:hover {
+    color:red ;
+    background-color: black;
+   
+
+  }
+  .main h1 {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+  .main button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width:50% ;
+    border: 0;
+    border-radius: 5px;
+    background-color:red;
+    
+  }
+  .main button:hover {
+    color:red ;
+    background-color: black;
+   
+
+  }
+  
+  .login button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width:50% ;
+    border: 0;
+    border-radius: 5px;
+    background-color:red;
+    
+  }
+  .login button:hover {
+    color:red ;
+    background-color: black;
+   
+
+  }
+  .login {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+  .login input {
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 70%;
+    border-radius: 5px ;
+    border-color:rgb(36, 13, 13);
+    outline: none;
+  }
+  .login p {
+    font-size: 20px;
+    margin: 15px 0;
+  }

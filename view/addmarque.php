@@ -55,7 +55,6 @@ if (
                     </label>
                 </td>
                 <td><input type="text" name="marque" id="marque" maxlength="20" placeholder="donner un nom"></td>
-                <td><p style="color: rgb(255, 0, 0)" id="nomEr"></p></td>
             </tr>
             <tr>
                 <td>

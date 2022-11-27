@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="da.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -34,6 +34,13 @@
                     <a href="dashboard2.php">
                         <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
                         <span class="title">marques</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="search_marque.php">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">search</span>
                     </a>
                 </li>
              

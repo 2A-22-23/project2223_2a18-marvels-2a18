@@ -40,7 +40,7 @@ $listepieces=$pieceC->listpieces();
                 <li>
                     <a href="dashboard1.php">
                         <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
-                        <span class="title">marque</span>
+                        <span class="title">marques</span>
                     </a>
                 </li>
                 <li>

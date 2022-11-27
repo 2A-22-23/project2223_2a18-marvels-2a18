@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+include_once '../config.php';
 include '../model/role.php';
 
 class roleC
@@ -8,6 +8,17 @@ class roleC
 public function Listerole()
     {
         $sql = "SELECT * FROM role";
+        $db = config::getConnexion();
+        try {
+            $liste = $db->query($sql);
+            return $liste;
+        } catch (Exception $e) {
+            die('Error:' . $e->getMessage());
+        }
+    }
+    public function Listerole1()
+    {
+        $sql = "SELECT idrole FROM role";
         $db = config::getConnexion();
         try {
             $liste = $db->query($sql);

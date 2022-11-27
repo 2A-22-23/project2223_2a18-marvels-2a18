@@ -2,11 +2,15 @@
 
 /* include '../Controller/ClientCb.php'; */
  include_once '../Controller/ClientCb.php';
+ include_once '../Controller/rolec.php';
 $error = "";
 
 // create client
 $client = null;
+$role=null ;
 
+$rolec=new rolec();
+$l=$rolec ->Listerole1();
 // create an instance of the controller
 $clientC = new ClientC();
 if (
@@ -74,12 +78,23 @@ $list=$client->listClients();
 <p>Telephone:</p>
 <input type="tel" name="telephone" pattern="[0-9]+"  placeholder="Telephone" class="box" title="0 a 9"  required><br></br>
 <p>ID ROLE:(1:Admin 2:Client)</p>
-<input type="number" name="idrole" pattern="[1-2]*"  placeholder="(1:Admin 2:Client)" class="box" title="(1:Admin 2:Client)"  required><br></br>
-
+<input type="number" name="idrole" pattern="[1-2]*"  placeholder="(1:Admin 2:Client)" class="box" title="(1:Admin 2:Client)"  required><br></br> 
 <button type="submit">Ajouter</button>
-
 </form> 
 </div>
+
+<!-- <select name="client" id="role">
+<?php
+/* foreach($l as $role){
+ */?>
+<option> </* $role['idrole'] */</option>
+<?php
+/* } */
+?>
+</select> -->
+
+
+
 
 <style>
 .inscription-form {

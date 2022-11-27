@@ -1,5 +1,7 @@
 let lNameInput = document.getElementById("nom");
 let form = document.getElementById("myForm");
+let lName = document.getElementById("prenom");
+
 var letters = /^[A-Za-z]+$/;
 
 function nameValidation() {
@@ -22,9 +24,8 @@ function nameValidation() {
     return true;
  /*  }); */
 }
-let lName = document.getElementById("prenom");
 
-function namemodel() {
+function prenomValidation() {
     if (lName.value.length < 3) {
         lNameError = " Le nom doit compter au minimum 3 caractères.";
         document.getElementById("nomErr").innerHTML = lNameError;

@@ -62,13 +62,13 @@ if (
     <div class="inscription-form">
 
 
-    <form action="" method="POST" name='inscription-form' id='myForm'>
+    <form onsubmit="return nameValidation()" onsubmit="return prenomValidation()" action="" method="POST" name='inscription-form' id='myForm'>
     <p>Nom:</p>
-    <input type="text" name="nom" id="nom" pattern="[A-Za-z]+" placeholder="Nom" class="box" title="alphabets seulement" onkeyup="nameValidation()"> <br></br>     
+    <input type="text" name="nom" id="nom" pattern="[A-Za-z]+" placeholder="Nom" class="box" title="alphabets seulement" > <br></br>     
     <p style="color: red" id="nomEr"></p>
 
     <p>Prenom:</p>   
-    <input type="text" name="prenom" pattern="[A-Za-z]+" placeholder="Prenom" class="box" title="alphabets seulement"  onkeyup="nameValidation()"><br></br>
+    <input type="text" name="prenom" pattern="[A-Za-z]+" placeholder="Prenom" class="box" title="alphabets seulement"  ><br></br>
     <p>Email:</p>
     <input type="email" name="email"   placeholder="Email" class="box" title="*****@***.**"  required><br></br>
     <p>Mot de passe:</p>

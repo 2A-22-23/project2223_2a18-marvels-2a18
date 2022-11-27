@@ -1,93 +1,44 @@
+let lNameInput = document.getElementById("nom");
+let form = document.getElementById("myForm");
+var letters = /^[A-Za-z]+$/;
 
-const nom = document.getElementById('nom')
-const prenom = document.getElementById('prenom')
-const email = document.getElementById('email')
-const mdp = document.getElementById('mdp')
-const telephone = document.getElementById('telephone')
-const form = document.getElementById('form')
-/* const errorElement = document.getElementById('error') */
+function nameValidation() {
+ /*  form.addEventListener('submit', (e) => { */
+    if (lNameInput.value.length < 3) {
+        lNameError = " Le nom doit compter au minimum 3 caractères.";
+        document.getElementById("nomEr").innerHTML = lNameError;
 
-form.addEventListener('submit', (e) => {
-e.preventDefault();
-validateInputs();
+        return false;
+    }
+    if (!lNameInput.value.match(letters)) {
+        lNameError2 = "Veuillez entrer un nom valid ! (seulement des lettres)";
+        lNameValid2 = false;
+        document.getElementById("nomEr").innerHTML = lNameError2;
+        return false;
+    }
+    document.getElementById("nomEr").innerHTML =
+        "<p style='color:green'> Correct </p>";
 
-});
-const setError =( element , message ) => {
-    const inputControl =element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-    errorDisplay.innertext =message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
+    return true;
+ /*  }); */
 }
-const setSuccess =element => {
-    const inputControl =element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-    errorDisplay.innertext ='';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+let lName = document.getElementById("prenom");
 
+function namemodel() {
+    if (lName.value.length < 3) {
+        lNameError = " Le nom doit compter au minimum 3 caractères.";
+        document.getElementById("nomErr").innerHTML = lNameError;
+
+        return false;
+    }
+    if (!lName.value.match(letters)) {
+        lNameError2 = "Veuillez entrer un nom valid ! (seulement des lettres)";
+        lNameValid2 = false;
+        document.getElementById("nomErr").innerHTML = lNameError2;
+        return false;
+    }
+    document.getElementById("nomErr").innerHTML =
+        "<p style='color:green'> Correct </p>";
+
+    return true;
 }
-
-
-const validateInputs = () => {
-const nomValue=nom.value.trim();
-const prennomValue=prenom.value.trim();
-const emailValue=email.value.trim();
-const mdpValue=mdp.value.trim();
-const telephoneValue=telephone.value.trim();
-if(nomValue==='')
-{
-setError(nom, 'Username is required');
-
-}else{setSuccess(nom);
-}
-if(prenomValue==='')
-{
-setError(prenom, 'Email is required');
-
-}else{setSuccess(prenom);
-}
-
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* form.addEventListener('submit', (e) => {
-  let messages = []
-  if (nom.value === '' || nom.value == null) {
-    messages.push('nom is required')
-  
-  }
-
-  if (password.value.length <= 6) {
-    messages.push('Password must be longer than 6 characters')
-  }
-
-  if (password.value.length >= 20) {
-    messages.push('Password must be less than 20 characters')
-  }
-
-  if (password.value === 'password') {
-    messages.push('Password cannot be password')
-  }
-
-  if (messages.length > 0) {
-    e.preventDefault()
-    errorElement.innerText = messages.join(', ')
-  }
-}) */

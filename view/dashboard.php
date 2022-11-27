@@ -26,7 +26,7 @@ $listepieces=$pieceC->listpieces();
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="da.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -114,18 +114,25 @@ $listepieces=$pieceC->listpieces();
                                            <td> <?php echo $piece['qte']; ?></td>
                                            <td> <?php echo $piece['marque']; ?></td>
 
-                                           <td>
+                                          <!--  <td>
                                             <form method="post" action="Listpieces.php">
 						                     <input type="submit" class="btn modif" name="Modifier" value="Modifier">
-						                     <input type="hidden" value=<?PHP echo $piece['idpiece']; ?> name="id">
+						                     <input type="hidden" value=<?PHP /* echo $piece['idpiece']; */ ?> name="id">
 					                        </form>
-                                          </td>
+                                          </td> -->
+                                          <td align="center">
+                    <form method="POST" action="updatepiece.php">
+                        <input type="submit" name="update" value="Update">
+                        <input type="hidden" value=<?PHP echo $piece['idpiece']; ?> name="idpiece">
+                    </form>
+                </td>
 
                                            <td> 
-                                           <form method="post" action="deletepiece.php">
+                                           <!-- <form method="post" action="deletepiece.php">
 						                     <input type="submit" class="btn supp" name="Supprimer" value="Supprimer">
-						                     <input type="hidden" value=<?PHP echo $piece['idpiece']; ?> name="id">
-					                        </form> 
+						                     <input type="hidden" value=<?PHP /* echo $piece['idpiece'];  */?> name="id">
+					                        </form>  -->
+                                            <a href="deletepiece.php?idpiece=<?php echo $piece['idpiece']; ?>">Delete</a>
                                            </td>
                                            </tr>
                                            <?php

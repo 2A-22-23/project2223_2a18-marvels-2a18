@@ -26,7 +26,7 @@ $listemarques=$marqueC->listmarque();
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="da.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -34,7 +34,7 @@ $listemarques=$marqueC->listmarque();
                 <li>
                     <a href="dashboard.php">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">marques</span>
+                        <span class="title">pieces</span>
                     </a>
                 </li>
                 <li>
@@ -110,18 +110,28 @@ $listemarques=$marqueC->listmarque();
                                            <td> <?php echo $marque['nommodel']; ?></td>
                                            
 
-                                           <td>
+                                           <!-- <td>
                                             <form method="post" action="Listmarque.php">
 						                     <input type="submit" class="btn modif" name="Modifier" value="Modifier">
 						                     <input type="hidden" value=<?PHP echo $marque['idmarque']; ?> name="id">
 					                        </form>
                                           </td>
+                                          
+ -->
+ <td align="center">
+                    <form method="POST" action="updatemarque.php">
+                        <input type="submit" name="update" value="Update">
+                        <input type="hidden" value=<?PHP echo $marque['idmarque']; ?> name="idmarque">
+                    </form>
+                </td>
+
 
                                            <td> 
-                                           <form method="post" action="deletemarque.php">
+                                           <!-- <form method="post" action="deletemarque.php">
 						                     <input type="submit" class="btn supp" name="Supprimer" value="Supprimer">
-						                     <input type="hidden" value=<?PHP echo $marque['idmarque']; ?> name="id">
-					                        </form> 
+						                     <input type="hidden" value=<?PHP/*  echo $marque['idmarque']; */ ?> name="id">
+					                        </form>  -->
+                                            <a href="deletemarque.php?idmarque=<?php echo $marque['idmarque']; ?>">Delete</a>
                                            </td>
                                            </tr>
                                            <?php

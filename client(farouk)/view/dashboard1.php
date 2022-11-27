@@ -86,7 +86,7 @@ $list=$client->listClients();
                                     <div class="cardheader">
                                         <h2>client</h2>
                                         <a href="addclientdashboard.php" class="btn">Ajouter</a>
-                                        <a href="searchCourse.php" class="btn">Search</a>
+                                        <a href="searchclient1.php" class="btn">Search</a>
                                     </div>
                                     <table>
                                    

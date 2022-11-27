@@ -33,7 +33,7 @@ class ClientC
     function addClient($client)
     {
         $sql = "INSERT INTO user  
-        VALUES (NULL, :n,:p, :e,:m,:t)";
+        VALUES (NULL, :n,:p, :e,:m,:t,:idr)";
         $db = config::getConnexion();
         try {
            
@@ -43,7 +43,8 @@ class ClientC
                 'p' => $client->getprenom(),
                 'e' => $client->getemail(),
                 'm' => $client->getmdp(),
-                't' => $client->gettelephone()
+                't' => $client->gettelephone(),
+                'idr' => $client->getidrole()
             ]);
                
             
@@ -93,4 +94,18 @@ class ClientC
             die('Error: ' . $e->getMessage());
         }
     }
+    function showclientt($str)
+    {
+        $sql = "SELECT * FROM user WHERE nom LIKE '%" . $str . "%'";
+        $db = config::getConnexion();
+        try {
+            $query = $db->prepare($sql);
+            $query->execute();
+
+            $client = $query->fetchAll();
+            return $client;
+        } catch (Exception $e) {
+            die('Error: ' . $e->getMessage());
+        }
+    } 
 }

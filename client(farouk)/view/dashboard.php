@@ -1,10 +1,4 @@
-<?php
- //include_once '../Model/Client.php';
- include_once '../Controller/ClientC.php';
- $client=new ClientC();
-$list=$client->listClients();
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">

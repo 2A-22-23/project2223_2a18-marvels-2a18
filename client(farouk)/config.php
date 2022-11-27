@@ -1,5 +1,5 @@
 <?php
-//farouk 
+
 class config
 {
     private static $pdo = null;
@@ -22,3 +22,5 @@ class config
         return self::$pdo;
     }
 }
+
+

@@ -1,6 +1,6 @@
 <?php
 include '../config.php';
-include '../model/piece.php';
+include '../Model/piece.php';
 
 class pieceC
 {

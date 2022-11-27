@@ -1,6 +1,6 @@
 <?php
 include '../config.php';
-include '../model/marque.php';
+include '../Model/marque.php';
 
 class marquec
 {

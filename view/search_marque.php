@@ -1,5 +1,5 @@
 <?php
-include '../controller/marquec.php';
+include '../Controller/marquec.php';
 $marquec = new marquec();
 
 if (isset($_GET['nommarque']) && !empty($_GET['nommarque'])) {

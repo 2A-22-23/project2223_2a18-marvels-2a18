@@ -1,5 +1,5 @@
 <?php
-include '../controller/piecesc.php';
+include '../Controller/piecesc.php';
 $pieceC = new pieceC();
 $list = $pieceC->listpieces();
 ?>

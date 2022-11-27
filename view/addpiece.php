@@ -1,6 +1,6 @@
 <?php
 
-include '../controller/piecesc.php';
+include '../Controller/piecesc.php';
 
 $error = "";
 

@@ -1,6 +1,6 @@
 <?php
 
-include '../controller/marquec.php';
+include '../Controller/marquec.php';
 
 $error = "";
 

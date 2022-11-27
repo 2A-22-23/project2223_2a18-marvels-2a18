@@ -33,8 +33,8 @@ if (
          /*    $_POST['marque'], */
             $_POST['description'],
             $_POST['prix'],
-            $_POST['marque'],
-            $_POST['qte']
+            $_POST['qte'],
+            $_POST['marque']
         );
         $piecec->updatepiece($piece, $_POST["idpiece"]);
         echo "test";

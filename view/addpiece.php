@@ -38,12 +38,12 @@ if (
            /*  $_POST['marque'], */
             $_POST['description'],
             $_POST['prix'],
-            $_POST['marque'],
-            $_POST['qte'])
+            $_POST['qte'],
+            $_POST['marque'])
         ;
         $piecec->addpiece($piece);
         
-      // header('Location:dashboard.php');  
+       header('Location:dashboard.php');  
     } else
         $error = "Missing information";
 }
@@ -125,9 +125,9 @@ if (
 
                     <select name="marque" id="marque">
 
-                        <?php foreach ($l as $marque )?>
+                        <?php foreach ($l as $marque ){?>
                         <option><?= $marque['idmarque']?></option>
-
+                        <?php }?>
                     </select>
 
                 </td>

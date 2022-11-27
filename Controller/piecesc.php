@@ -33,14 +33,13 @@ class pieceC
     function addpiece($piece)
     {
         $sql = "INSERT INTO piece  
-        VALUES (NULL,:n, /* :m, */ :d, :p,:q,:m)";
+        VALUES (NULL,:n, :d, :p,:q,:m)";
         $db = config::getConnexion();
         try {
            
             $query = $db->prepare($sql);
             $query->execute([
                 'n' => $piece->getName(),
-                /* 'm' => $piece->getmarque(), */
                 'd' => $piece->getdescription(),
                 'p' => $piece->getprix(),
                 'q' => $piece->getqte(),

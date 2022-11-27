@@ -1,5 +1,5 @@
 <?php
-include '../controller/piecesc.php';
+include '../Controller/piecesc.php';
 $piecec = new piecec();
 $piecec->deletepiece($_GET["idpiece"]);
 header('Location:Listpieces.php');

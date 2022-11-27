@@ -1,5 +1,5 @@
 <?php
-include '../controller/marquec.php';
+include '../Controller/marquec.php';
 $marquec = new marquec();
 $list = $marquec->listmarque();
 ?>

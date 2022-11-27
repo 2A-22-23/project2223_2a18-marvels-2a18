@@ -62,7 +62,7 @@ if (
     <div class="inscription-form">
 
 
-    <form onsubmit="return nameValidation()" onsubmit="return prenomValidation()" action="" method="POST" name='inscription-form' id='myForm'>
+    <form onsubmit="return nameValidation()"  action="" method="POST" name='inscription-form' id='myForm'>
     <p>Nom:</p>
     <input type="text" name="nom" id="nom" pattern="[A-Za-z]+" placeholder="Nom" class="box" title="alphabets seulement" > <br></br>     
     <p style="color: red" id="nomEr"></p>

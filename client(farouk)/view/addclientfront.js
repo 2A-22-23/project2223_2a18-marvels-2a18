@@ -1,7 +1,5 @@
 let lNameInput = document.getElementById("nom");
 let form = document.getElementById("myForm");
-let lName = document.getElementById("prenom");
-
 var letters = /^[A-Za-z]+$/;
 
 function nameValidation() {
@@ -24,6 +22,7 @@ function nameValidation() {
     return true;
  /*  }); */
 }
+let lName = document.getElementById("prenom");
 
 function prenomValidation() {
     if (lName.value.length < 3) {

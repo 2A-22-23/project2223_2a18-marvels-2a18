@@ -116,7 +116,7 @@ if (isset($_GET['nom']) && !empty($_GET['nom'])) {
     .rightboxx
     {
         float:right;
-               margin-right: 800px;
+               margin-right: 500px;
                 width:250px;
                 height:280px;
                 
@@ -124,7 +124,7 @@ if (isset($_GET['nom']) && !empty($_GET['nom'])) {
     }
     .rightbox{
                 float:right;
-               margin-right: 800px;
+               margin-right: 500px;
                 width:250px;
                 height:280px;
                 

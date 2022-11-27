@@ -158,19 +158,19 @@ if (
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="da.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard1.php">
+                    <a href="dashboard.php">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                         <span class="title">pieces</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard2.php">
+                    <a href="dashboard1.php">
                         <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
                         <span class="title">marque</span>
                     </a>

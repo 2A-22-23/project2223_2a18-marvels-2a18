@@ -54,7 +54,7 @@ if (
                     <label for="marque">nom de la marque:
                     </label>
                 </td>
-                <td><input type="text" name="marque" id="marque" maxlength="20" placeholder="donner un nom" onkeyup="nameValidation()"></td>
+                <td><input type="text" name="marque" id="marque" maxlength="20" placeholder="donner un nom"></td>
                 <td><p style="color: rgb(255, 0, 0)" id="nomEr"></p></td>
             </tr>
             <tr>
@@ -78,29 +78,6 @@ if (
         </table>
     </form>
 </body>
-<script>
-    let lNameInput = document.getElementById("nom");
-    var letters = /^[A-Za-z]+$/;
-
-function nameValidation() {
-    if (lNameInput.value.length < 3)
-    {
-        lNameError = " Le nom doit compter au minimum 3 caractères.";
-        document.getElementById("nomEr").innerHTML = lNameError;
-
-        return false;
-    }
-    if (!lNameInput.value.match(letters)) {
-        lNameError2 = "Veuillez entrer un nom valid ! (seulement des lettres)";
-        lNameValid2 = false;
-        document.getElementById("nomEr").innerHTML = lNameError2;
-        return false;
-    }
-    document.getElementById("nomEr").innerHTML =
-        "<p style='color:green'> Correct </p>";
-
-    return true;
-}
 
 
 

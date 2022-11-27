@@ -102,6 +102,6 @@ function nameValidation() {
     return true;
 }
 
-</script>
+
 
 </html>

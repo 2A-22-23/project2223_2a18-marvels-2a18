@@ -1,11 +1,17 @@
 <?php
 
 include '../Controller/piecesc.php';
+include '../Controller/marquec.php';
 
 $error = "";
 
 // create client
 $piece = null;
+$marque = null;
+
+$marquec = new marquec();
+$l=$marquec->l();
+
 
 // create an instance of the controller
 $piecec = new piecec();
@@ -36,7 +42,8 @@ if (
             $_POST['qte'])
         ;
         $piecec->addpiece($piece);
-       header('Location:dashboard.php');  
+        
+      // header('Location:dashboard.php');  
     } else
         $error = "Missing information";
 }
@@ -110,12 +117,22 @@ if (
             </tr>
             <tr>
                 <td>
-                    <label for="marque">marque:
-                    </label>
+                    <label for="marque">marque: </label>
                 </td>
+
                 <td>
-                    <input type="number" name="marque" id="marque">
+                   <!--  <input type="number" name="marque" id="marque"> -->
+
+                    <select name="marque" id="marque">
+
+                        <?php foreach ($l as $marque )?>
+                        <option><?= $marque['idmarque']?></option>
+
+                    </select>
+
                 </td>
+
+                
             </tr>
 
 

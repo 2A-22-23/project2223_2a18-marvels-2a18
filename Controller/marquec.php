@@ -1,9 +1,28 @@
 <?php
-include '../config.php';
+include_once '../config.php';
 include '../Model/marque.php';
 
 class marquec
 {
+
+    public function l()
+    {
+        $sql = "SELECT idmarque FROM marque_model";
+
+        $db = config::getConnexion();
+        try {
+            $liste = $db->query($sql);
+           
+            return $liste;
+        } catch (Exception $e) {
+            die('Error:' . $e->getMessage());
+        }
+    }
+
+
+
+
+
     public function listmarque()
     {
         $sql = "SELECT * FROM marque_model";

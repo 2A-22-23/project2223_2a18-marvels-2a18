@@ -43,6 +43,14 @@ $listepieces=$pieceC->listpieces();
                         <span class="title">marque</span>
                     </a>
                 </li>
+                <li>
+                    <a href="search_marque.php">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">search</span>
+                    </a>
+                </li>
+
+
              
                 <li>
                     <a href="#">

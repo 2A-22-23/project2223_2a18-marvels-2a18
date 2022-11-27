@@ -50,7 +50,7 @@ if (
     <style>
         .form{
                 float:right;
-               margin-right: 600px;
+                margin-right: 600px;
                 width:25%;
                 height:280px;
                 margin-top: 60px;
@@ -65,7 +65,8 @@ if (
                     <label for="marque">nom de la marque:
                     </label>
                 </td>
-                <td><input type="text" name="marque" id="marque" maxlength="20" placeholder="donner un nom"></td>
+                <td><input type="text" name="marque" id="marque" maxlength="20" placeholder="donner un nom" onkeyup="nameValidation()"></td>
+                <td ><p style="color: red" id="nomEr"></p></td>
             </tr>
             <tr>
                 <td>
@@ -73,8 +74,9 @@ if (
                     </label>
                 </td>
                 <td>
-                    <input type="text" name="model" id="model" maxlength="100" placeholder="donner une description">
+                    <input type="text" name="model" id="model" maxlength="100" placeholder="donner une description"onkeyup="namemodel()">
                 </td>
+                <td ><p style="color: red" id="nomErr"></p></td>
             </tr>
 
             <tr align="center">
@@ -171,6 +173,8 @@ if (
     list.forEach((item)=> 
     item.addEventListener('mouseover',activeLink));
 </script>
+
+<script src="validation.js"></script>
 </body>
 
 

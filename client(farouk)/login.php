@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css"> 
     <title>Document</title>
     <script> alert("fofofofofofofo");</script>
 </head>
 <body>
 <div id="error"></div>
-<form id="form" action="/" method="GET">
+<form id="inscription-form" action="/" method="GET">
   <div>
     <label for="name">Name</label>
     <input id="name" name="name" type="text" >
@@ -21,21 +22,6 @@
   </div>
   <button type="submit">Submit</button>
 </form>
- 
-      
-      
-     
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
 
-   
 </body>
 </html>

@@ -1,45 +1,4 @@
-<?php
 
-include '../Controller/ClientC.php';
-
-$error = "";
-
-
-$client = null;
-
-
-$clientC = new ClientC();
-if (
-    isset($_POST["nom"]) &&
-    isset($_POST["prenom"]) &&
-    isset($_POST["email"]) &&
-    isset($_POST["mdp"]) &&
-    isset($_POST["telephone"])
-) {
-    if (
-        !empty($_POST['nom']) &&
-        !empty($_POST["prenom"]) &&
-        !empty($_POST["email"]) &&
-        !empty($_POST["mdp"]) &&
-        !empty($_POST["telephone"])
-    ) {
-        $client = new Client(
-            null,
-            $_POST['nom'],
-            $_POST['prenom'],
-            $_POST['email'],
-            $_POST['mdp'],
-            $_POST['telephone']
-            
-        );
-        $clientC->addClient($client);
-        header('Location:../view/code/indexx.php');
-    } else
-        $error = "Missing information";
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
@@ -76,15 +35,21 @@ if (
 <a href="#contact"> Contact </a>
 
  </nav>
-<div id="login-btn"> 
+<!-- <div id="login-btn"> 
 
     <button class="btn">Inscription</button>
     <i class="far fa-user"></i>
 </div>
-<div id="login-btn"> 
-
-    <button class="btn">Se Connecter</button>
-    <i class="far fa-user"></i>
+<div id="login-btn"> --> 
+<div id="inscription-btn"> 
+    <form method="POST" action="./login.php">
+        <button class="btn">Se connecter</button>
+    </form>
+</div>
+<div id="inscription-btn"> 
+    <form method="POST" action="./inscription.php">
+        <button class="btn">S'inscrire</button>
+    </form>
 </div>
 
 
@@ -98,29 +63,22 @@ if (
   <div class="login-form-container"> 
 
     <span class="fas fa-times"id="close-login-form"></span>
-    <div id="error">
-        <?php echo $error; ?>
-    </div>
-    <div class="inscription-form">
+   
+    <div class="inscripti-form">
 
 
     <form onsubmit="return nameValidation()"  action="" method="POST" name='inscription-form' id='myForm'>
-    <p>Nom:</p>
-    <input type="text" name="nom" id="nom" pattern="[A-Za-z]+" placeholder="Nom" class="box" title="alphabets seulement" > <br></br>     
-    <p style="color: red" id="nomEr"></p>
+ 
 
-    <p>Prenom:</p>   
-    <input type="text" name="prenom" pattern="[A-Za-z]+" placeholder="Prenom" class="box" title="alphabets seulement"  ><br></br>
+    
     <p>Email:</p>
     <input type="email" name="email"   placeholder="Email" class="box" title="*****@***.**"  required><br></br>
     <p>Mot de passe:</p>
+
     <input type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" class="box" title ="numero/majuscule/miniscule et au moins 8 caracteres"  required><br></br>
-    <p>Telephone:</p>
-    <input type="tel" name="telephone" pattern="[0-9]+"  placeholder="Telephone" class="box" title="0 a 9"  required><br></br>
-    <button class ="btn" type="submit">Créer un compte
+   
+    <button class ="btn" type="submit">Se Connecter
     </button>
-
-
   </form> 
   </div>
 

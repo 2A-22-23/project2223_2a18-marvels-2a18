@@ -88,7 +88,7 @@
                                 <input type="text" name="nommarque" id="nommarque" placeholder="Enter marque name" class="btn" >
                                 <input type="submit" value="Search"class="btn">
                             </form>
-                            <table border="1" align="center" width="70%">
+                            <table border="1" align="center" width="70%" bordercolor="red">
                                 <tr>
                                     <th>Id marque</th>
                                     <th>nommarque</th>

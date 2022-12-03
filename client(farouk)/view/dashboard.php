@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <title>Back with client</title>
+    
+
 </head>
 <body>
+    
     <div class="container">
         <div class="navigation">
             <ul>
@@ -59,6 +62,36 @@
                 
             </ul>
         </div>
+        <div id="deconnecter"> 
+    <form method="POST" action="../Code/index.php">
+        <button class="disconnect">Se Deconnecter</button>
+    </form>
+</div>
+<style>
+   .disconnect{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width:7% ;
+    border: 0;
+    border-radius: 5px;
+    background-color:red;
+    margin-top: 70px;
+    margin-right: 30px;
+    margin-left:1600px;
+   
+
+    }
+    .disconnect:hover {
+    color:red ;
+    background-color:grey;
+    
+
+  } 
+
+  
+</style>
 
 
                                 

@@ -61,8 +61,14 @@ $list=$role->Listerole();
         <?php echo $error; ?>
     </div>
 <div class="inscription-form">
-    <form action="" method="POST">
-        <table bordercolor="#fd2600" border="6" align="center">
+    <form action="" method="POST" name=inscription-form>
+    <p>ID ROLE:</p>
+    <input type="number" name="idrole" id="idrole" pattern="[0-9]+" maxlength="3" required>
+    <p>ROLE:</p>
+    <input type="text"  name="role"  id="role" pattern="[a-zA-z]+" maxlength="30" required>
+    <button type="submit">Ajouter</button>
+    
+        <!-- <table bordercolor="#fd2600" border="6" align="center">
         <tr>
                 <td>
                     <label for="idrole" class="txt"> id-role:
@@ -81,13 +87,13 @@ $list=$role->Listerole();
                     </div>
                     
                 </tr>
-          <!--   <tr>
+            <tr>
                 <td>
                     <label for="idclient" class="txt">idclient:
                     </label>
                 </td>
                 <td><input type="number"  name="idclient" pattern="[0-9]+" id="idclient" maxlength="30" required  ></td>
-            </tr> -->
+            </tr> 
                 
             <td></td>
                 <td>
@@ -96,7 +102,7 @@ $list=$role->Listerole();
                 
                 
             </tr>
-        </table>
+        </table> -->
                   
     </form> 
  </div>

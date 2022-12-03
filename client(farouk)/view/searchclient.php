@@ -101,6 +101,8 @@ if (isset($_GET['nom']) && !empty($_GET['nom'])) {
                 width:25%;
                 height:280px;
                 margin-top: 60px;
+                
+                
             }
     </style>
 	<div>

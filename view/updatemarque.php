@@ -39,7 +39,7 @@ if (
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
-    <title>Back with client</title>
+    <title>Back with mo</title>
 </head>
 
 <body>
@@ -67,7 +67,7 @@ if (
     </style>
 
         <form action="" method="POST" class="form">
-            <table border="1" align="center" bordercolor="blue">
+            <table border="1" align="center" bordercolor="red">
                 <tr>
                     <td>
                         <label for="idmarque">Id de la marque:

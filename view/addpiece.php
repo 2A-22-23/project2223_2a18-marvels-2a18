@@ -78,7 +78,7 @@ if (
             }
      </style>
     <form action="" method="POST" class="form">
-        <table border="1" align="center" bordercolor="blue" >
+        <table border="1" align="center" bordercolor="red" >
 
             <tr>
                 <td>

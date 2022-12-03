@@ -40,7 +40,7 @@ if (isset($_GET['nommarque']) && !empty($_GET['nommarque'])) {
     <center>
         <h1>List of marques</h1>
     </center>
-    <table border="1" align="center" width="70%" bordercolor="blue">
+    <table border="1" align="center" width="70%" bordercolor="red">
         <tr>
             <th>Id marque</th>
             <th>nommarque</th>

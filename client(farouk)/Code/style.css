@@ -593,7 +593,7 @@ padding:0 .5rem;
 .inscription-form {
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 53%;
     transform: translate(-50%, -50%);
     width: 350px;
   }
@@ -601,6 +601,7 @@ padding:0 .5rem;
       font-size: 16px;
       padding: 15px 10px;
       width: 70%;
+      border: 1;
       border-radius: 5px ;
       border-color:rgb(36, 13, 13);
       outline: none;
@@ -611,8 +612,9 @@ padding:0 .5rem;
       margin: 20px 0;
       padding: 10px 15px;
       width:50% ;
-      border: 0;
+      border: 1;
       border-radius: 5px;
+      border-color: black;
       background-color:red;
       
     }

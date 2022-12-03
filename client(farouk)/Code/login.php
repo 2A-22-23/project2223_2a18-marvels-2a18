@@ -67,6 +67,24 @@ catch(PDOException $error)
     <meta charset="utf-8">
     <title>Connection</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+body{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #DD5353 0%,
+    #DD5353 50%,
+    #DD5353 50%,
+   black 100%
+  );
+}
+.inscription-form label{
+  font-size: 20px;
+
+}
+</style>
   </head>
   <body>
      

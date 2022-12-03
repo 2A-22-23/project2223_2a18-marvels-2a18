@@ -33,7 +33,7 @@ if (
             
         );
         $clientC->addClient($client);
-        header('Location:../code/indexx.php');
+        header('Location:../code/index.php');
     } else
         $error = "Missing information";
 }

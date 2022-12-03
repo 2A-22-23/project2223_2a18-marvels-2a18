@@ -1,18 +1,4 @@
-<?php
-session_start();
-if(isset($_SESSION["email"]))
-{
-echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 
-/* <div></div> */
-
-
-}
-
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en"> 
     <head>
@@ -56,11 +42,15 @@ echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 </div>
 <div id="login-btn"> --> 
 <div id="inscription-btn"> 
-    <form method="POST" action="./index.php">
-        <button class="btn">Se Deconnecter</button>
+    <form method="POST" action="./login.php">
+        <button class="btn">Se connecter</button>
     </form>
 </div>
-
+<div id="inscription-btn"> 
+    <form method="POST" action="./inscription.php">
+        <button class="btn">S'inscrire</button>
+    </form>
+</div>
 
 
 
@@ -69,8 +59,31 @@ echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 <!--header section ends-->
 
 
+<!--login form--> 
+  <div class="login-form-container"> 
 
-  
+    <span class="fas fa-times"id="close-login-form"></span>
+   
+    <div class="inscripti-form">
+
+
+    <form onsubmit="return nameValidation()"  action="" method="POST" name='inscription-form' id='myForm'>
+ 
+
+    
+    <p>Email:</p>
+    <input type="email" name="email"   placeholder="Email" class="box" title="*****@***.**"  required><br></br>
+    <p>Mot de passe:</p>
+
+    <input type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" class="box" title ="numero/majuscule/miniscule et au moins 8 caracteres"  required><br></br>
+   
+    <button class ="btn" type="submit">Se Connecter
+    </button>
+  </form> 
+  </div>
+
+
+  </div>
 
   <!--Home page begins-->
 

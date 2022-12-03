@@ -66,14 +66,14 @@ public function Listerole()
             $query = $db->prepare(
                 'UPDATE role SET 
                     idrole=:idrole,
-                    role = :role, 
+                    role = :role
 /*                     idclient = :idclient
  */                    
                 WHERE idrole= :idrole'
             );
             $query->execute([
                 'idrole' => $id,
-                'role' => $role->role,
+                'role' => $role->role
                // 'idclient' => $role->idclient
                 
             ]);

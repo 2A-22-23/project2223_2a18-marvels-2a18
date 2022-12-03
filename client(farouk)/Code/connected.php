@@ -4,6 +4,8 @@ if(isset($_SESSION["email"]))
 {
 echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 
+<div></div>
+
 
 }
 

@@ -108,4 +108,32 @@ class ClientC
             die('Error: ' . $e->getMessage());
         }
     } 
+    /* function showuser1($email,$mdp)
+    {
+        $sql = "SELECT * from user where nom = '$email' AND mot_de_passe ='$mdp'";
+        $db = config::getConnexion();
+        try {
+            $query = $db->prepare($sql);
+            $query->execute();
+
+            $user = $query->fetch();
+            return $user;
+        } catch (Exception $e) {
+            die('Error: ' . $e->getMessage());
+        }
+    }
+    function showuser2($email,$mdp)
+    {
+        $sql = "SELECT * from user where iduser = '$email' AND mot_de_passe ='$mdp'";
+        $db = config::getConnexion();
+        try {
+            $query = $db->prepare($sql);
+            $query->execute();
+
+            $user = $query->fetch();
+            return $query;
+        } catch (Exception $e) {
+            die('Error: ' . $e->getMessage());
+        }
+    } */
 }

@@ -20,18 +20,27 @@ if(isset($_POST["button"]))
 else{
     $query="SELECT * FROM user WHERE email=:email AND mdp=:mdp";
     $statement =$connect->prepare($query);
-    $statement->excute(
+    $statement->execute(
 array(
 'email'=> $_POST["email"],
-'mdp' => $_POST["mdp"]
+'mdp' => $_POST["mdp"],
+/* 'id' => $_POST["id"] */
+
 
 )
 
     );
     $count=$statement->rowCount();
     if($count >0)
-    { $_SESSION["email"]=$_POST["email"];
-        header("location:connected.php");
+    { if($user["idrole"] ==1){
+        $_SESSION["email"]=$user["email"];
+      header("location:../view/dashboard.php");
+   }else 
+   {
+        
+        
+        $_SESSION["email"]=$_POST["email"];
+        header("location:indexx.php");}
 }
 else
 {

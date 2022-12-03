@@ -103,6 +103,12 @@ class marquec
             die('Error: ' . $e->getMessage());
         }
     } 
+
+
+
+
+
+    
      function showmarquee($nommarque)
     {
         $sql = "SELECT * FROM marque_model WHERE nommarque LIKE '%" . $nommarque . "%'";

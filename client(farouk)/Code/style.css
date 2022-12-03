@@ -590,7 +590,38 @@ padding:0 .5rem;
 }
 
 
-
+.inscription-form {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+  .inscription-form input {
+      font-size: 16px;
+      padding: 15px 10px;
+      width: 70%;
+      border-radius: 5px ;
+      border-color:rgb(36, 13, 13);
+      outline: none;
+    }
+    .inscription-form button {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0;
+      padding: 10px 15px;
+      width:50% ;
+      border: 0;
+      border-radius: 5px;
+      background-color:red;
+      
+    }
+    .inscription-form button:hover {
+      color:red ;
+      background-color: black;
+     
+  
+    }
 
 
 

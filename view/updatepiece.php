@@ -125,7 +125,7 @@
                             <div class="cardheader">
                                 <h2>Modifier une piece</h2>
                             </div>
-                            <form action="" method="POST">
+                            <form action="" method="POST" onsubmit="return (uppiece());">
                                 <table border="1" align="center" bordercolor="red">
                                     <tr>
                                         <td>
@@ -139,7 +139,7 @@
                                             <label for="nompiece"> nom de la piece:
                                             </label>
                                         </td>
-                                        <td><input type="text" name="nompiece" id="nompiece" value="<?php echo $piece['nompiece']; ?>" maxlength="20" onkeyup="uppiece()"></td>
+                                        <td><input type="text" name="nompiece" id="nompiece" value="<?php echo $piece['nompiece']; ?>"></td>
                                         <td><p style="color: red" id="nomEr"></p></td> 
                                     </tr>
                                     <tr>

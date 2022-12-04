@@ -122,7 +122,7 @@
                             <div class="cardheader">
                                 <h2>Ajouter une piece</h2>
                             </div>
-                            <form action="" method="POST">
+                            <form action="" method="POST"  onsubmit="return (piece());">
                                 <table border="1" align="center">
                                     <tr>
                                         <td>
@@ -130,9 +130,9 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <input type="text" name="nom" id="nom" maxlength="20" placeholder="donner un nom" onkeyup="piece()"  >
+                                            <input type="text" name="nom" id="nom" maxlength="20" placeholder="donner un nom">
                                         </td>
-                                         <td><p style="color: red" id="nomEr"></p></td> 
+                                        <td><p style="color: red" id="nomEr"></p></td> 
                                     </tr>
                                     <tr>
                                         <td>

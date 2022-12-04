@@ -10,7 +10,6 @@ function nameValidation() {
     if (lNameInput.value.length < 3) {
         lNameError = " Le nom doit compter au minimum 3 caractères.";
         document.getElementById("nomEr").innerHTML = lNameError;
-
         return false;
     }
     if (!lNameInput.value.match(letters)) {
@@ -22,10 +21,10 @@ function nameValidation() {
     document.getElementById("nomEr").innerHTML =
         "<p style='color:green'> Correct </p>";
 
-    return true;
-}
-
-function namemodel() {
+    /*  return true;
+ }
+ 
+ function namemodel() { */
     if (lName.value.length < 3) {
         lNameError = " Le nom doit compter au minimum 3 caractères.";
         document.getElementById("nomErr").innerHTML = lNameError;
@@ -53,9 +52,9 @@ function marque() {
     document.getElementById("nomEr").innerHTML =
         "<p style='color:green'> Correct </p>";
 
-    return true;
-}
-function model() {
+    /*  return true;
+ }
+ function model() { */
     if (upmodel.value.length < 3) {
         lNameError = " Le nom doit compter au minimum 3 caractères.";
         document.getElementById("nomErr").innerHTML = lNameError;

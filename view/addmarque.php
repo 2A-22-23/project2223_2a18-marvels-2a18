@@ -103,14 +103,14 @@
                             <div class="cardheader">
                                 <h2>Ajouter une marque</h2>
                             </div>
-                            <form action="" method="POST">
+                            <form action="" method="POST"  onsubmit="return (nameValidation());">
                                 <table border="1" align="center">
                                     <tr>
                                         <td>
                                             <label for="marque">nom de la marque:
                                             </label>
                                         </td>
-                                        <td><input type="text" name="marque" id="marque" maxlength="20" placeholder="donner un nom" onkeyup="nameValidation()"></td>
+                                        <td><input type="text" name="marque" id="marque" placeholder="donner un nom"></td>
                                         <td><p style="color: red" id="nomEr"></p></td>
                                     </tr>
                                     <tr>
@@ -119,7 +119,7 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <input type="text" name="model" id="model" maxlength="100" placeholder="donner une description"onkeyup="namemodel()">
+                                            <input type="text" name="model" id="model"placeholder="donner une description">
                                         </td>
                                         <td><p style="color: red" id="nomErr"></p></td>
                                     </tr>

@@ -110,7 +110,7 @@
                             <div class="cardheader">
                                 <h2>Modifier une marque</h2>
                             </div>
-                            <form action="" method="POST" class="form">
+                            <form action="" method="POST" class="form" onsubmit="return (marque());">
                                 <table border="1" align="center" bordercolor="red">
                                     <tr>
                                         <td>
@@ -122,7 +122,7 @@
                                         <td>
                                             <label for="nommarque"> nom de la marque:</label>
                                         </td>
-                                        <td><input type="text" name="nommarque" id="nommarque" value="<?php echo $marque['nommarque']; ?>" maxlength="20" onkeyup="marque()"></td>
+                                        <td><input type="text" name="nommarque" id="nommarque" value="<?php echo $marque['nommarque']; ?>"></td>
                                          <td><p style="color: red" id="nomEr"></p></td> 
                                     </tr>
                                     <tr>
@@ -130,7 +130,7 @@
                                             <label for="nommodel">nom du model:</label>
                                         </td>
                                         <td>
-                                            <input type="text" name="nommodel" value="<?php echo $marque['nommodel']; ?>" id="nommodel" maxlength="100" onkeyup="model()">
+                                            <input type="text" name="nommodel" value="<?php echo $marque['nommodel']; ?>" id="nommodel" >
                                         </td>
                                         <td><p style="color: red" id="nomErr"></p></td> 
                                     </tr>

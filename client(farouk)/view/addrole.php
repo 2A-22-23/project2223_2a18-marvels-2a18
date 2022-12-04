@@ -61,48 +61,50 @@ $list=$role->Listerole();
         <?php echo $error; ?>
     </div>
 <div class="inscription-form">
-    <form action="" method="POST" name=inscription-form>
+<form  action="" method="POST" name='myForm' onsubmit = "return(validate());">
     <p>ID ROLE:</p>
-    <input type="number" name="idrole" id="idrole" pattern="[0-9]+" maxlength="3" required>
+    <input type="number" name="idrole" id="idrole">
     <p>ROLE:</p>
-    <input type="text"  name="role"  id="role" pattern="[a-zA-z]+" maxlength="30" required>
+    <input type="text"  name="role"  id="role">
     <button type="submit">Ajouter</button>
     
-        <!-- <table bordercolor="#fd2600" border="6" align="center">
-        <tr>
-                <td>
-                    <label for="idrole" class="txt"> id-role:
-                    </label>
-                </td>
-               <td><input type="number" name="idrole" id="idrole" pattern="[0-9]+" maxlength="30" required></td>
-            </tr>
-            <tr>
-            <tr>
-                <td>
-                    <label for="role" class="txt"> role:
-                    </label>
-                </td>
-                <td>
-                    <input type="text"  name="role"  id="role" pattern="[a-zA-z]+" maxlength="30" required></td>
-                    </div>
-                    
-                </tr>
-            <tr>
-                <td>
-                    <label for="idclient" class="txt">idclient:
-                    </label>
-                </td>
-                <td><input type="number"  name="idclient" pattern="[0-9]+" id="idclient" maxlength="30" required  ></td>
-            </tr> 
-                
-            <td></td>
-                <td>
-                    <input type="submit" value="Save">
-                </td>
-                
-                
-            </tr>
-        </table> -->
+    <script type = "text/javascript">
+      var numbers =/^[1-9]+$/;
+         var letters = /^[A-Za-z]+$/;
+         var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         // Form validation code will come here.
+         function validate() {
+         
+            if( document.myForm.role.value == "" ) {
+               alert( "Veuillez remplir le role!" );
+             
+               document.myForm.role.focus() ;
+               return false;
+            }
+            if( !document.myForm.role.value.match(letters) ) {
+               alert( "le role doit ne contenir que des lettres!" );
+           
+               document.myForm.role.focus() ;
+               return false;
+            }
+
+            if( document.myForm.idrole.value == "" ) {
+               alert( "Veuillez remplir le id " );
+             
+               document.myForm.idrole.focus() ;
+               return false;
+            }
+            if( !document.myForm.idrole.value.match(numbers) ) {
+               alert( "id doit ne contenir que des chiffres!" );
+           
+               document.myForm.idrole.focus() ;
+               return false;
+            }
+           
+            
+         }
+      
+  </script>
                   
     </form> 
  </div>

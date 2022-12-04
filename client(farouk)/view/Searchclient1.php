@@ -79,17 +79,20 @@ if (isset($_GET['nom']) && !empty($_GET['nom'])) {
                         
                     </div>
 
-    <div class="rightbox">
+    <div class="search">
         <form action="" method="GET">
             <input type="text" name="nom" id="nom" placeholder="Enter client name">
             <input type="submit" value="Search">
         </form>
         </div>
+
+        
+       
         <div class="rightboxx">
     <center>
-        <h1>List of clients</h1>
-    </center>
-    <table border="1" bordercolor="red" align="center" width="70%">
+        
+   
+    <table border="10" bordercolor="red" align="center" width="70%">
         <tr>
             <th>Id client</th>
             <th>nom</th>
@@ -111,25 +114,20 @@ if (isset($_GET['nom']) && !empty($_GET['nom'])) {
         }
         ?>
     </table>
+    </center>
     </div>
     <style>
-    .rightboxx
-    {
-        float:right;
-               margin-right: 500px;
-                width:250px;
-                height:280px;
-                
-                margin-top: -50px;
-    }
-    .rightbox{
+       .search{
                 float:right;
-               margin-right: 500px;
+               margin-right: 800px;
                 width:250px;
                 height:280px;
                 
-                margin-top: 60px;
+                margin-top: 70px;
             }
+            
+           
+
     </style>
     
 </body>

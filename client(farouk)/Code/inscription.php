@@ -69,23 +69,23 @@ body{
 }
 </style>
 
-    <form onsubmit="return Validate()"  action="" method="POST" name='inscription-form' name='myForm'>
-    <!-- <label>Nom:</label> -->
-    <input type="text" name="nom" id="nom" placeholder="Nom" class="box" title="alphabets seulement" > <br></br>     
-    <p style="color: red" id="nomEr1"></p>
+    <form  action="" method="POST" name='myForm' onsubmit = "return(validate());">
+    
+    <input type="text" name="nom" id="nom" placeholder="Nom" > <br></br>     
+   <!--  <p style="color: red" id="nomEr1"></p> -->
     <br><br>
 
-   <!--  <label>Prenom:</label>    -->
-    <input type="text" name="prenom" id="prenom" ><br></br>
-    <p style="color: red" id="nomEr2"></p>
+   
+    <input type="text" name="prenom" id="prenom" placeholder="Prenom"><br></br>
+    <!-- <p style="color: red" id="nomEr2"></p> -->
     <br><br>
-    <!--  <label>Email:</label> -->
-    <input type="email" name="email" ><br></br>
-    <!-- <label>Mot de passe:</label> -->
+    
+    <input type="email" name="email" placeholder="Email"><br></br>
+  
     <br><br>
-    <input type="password" name="mdp" ><br></br>
-   <!--  <label>Telephone:</label> --><br><br>
-    <input type="tel" name="telephone"><br></br>
+    <input type="password" name="mdp" placeholder="Mot de passe" ><br></br>
+  <br><br>
+    <input type="tel" name="telephone" placeholder="Numero de telephone"><br></br>
     <button type="submit">S'inscrire
         
     </button>
@@ -93,33 +93,63 @@ body{
 
   </form> 
   </div>
-  <script>
-function validate() {
+ 
+<script type = "text/javascript">
       
-      if( document.myForm.nom.value == "" ) {
-         alert( "remplir votre nom!" );
-         document.myForm.nom.focus() ;
-         return false;
-      }
-      if( document.myForm.prenom.value == "" ) {
-         alert( "remplir votre prenom!" );
-         document.myForm.prenom.focus() ;
-         return false;
-      }
-     /*  if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
-         document.myForm.Zip.value.length != 5 ) {
+         var letters = /^[A-Za-z]+$/;
+         var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         // Form validation code will come here.
+         function validate() {
          
-         alert( "Please provide a zip in the format #####." );
-         document.myForm.Zip.focus() ;
-         return false;
-      }
-      if( document.myForm.Country.value == "-1" ) {
-         alert( "Please provide your country!" );
-         return false;
-      }
-      return( true ); */
-   }
+            if( document.myForm.nom.value == "" ) {
+               alert( "Veuillez entrer votre nom!" );
+             
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( !document.myForm.nom.value.match(letters) ) {
+               alert( "le nom doit ne contenir que des lettres!" );
+           
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( document.myForm.email.value == "" ) {
+            alert( "Veuillez entrer votre email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
 
+            if( document.myForm.prenom.value == "" ) {
+               alert( "veuillez entrer votre prenom!" );
+               document.myForm.prenom.focus() ;
+               return false;}
+               
+               if( !document.myForm.prenom.value.match(letters) ) {
+               alert( "le prenom doit ne contenir que des lettres!" );
+           
+               document.myForm.prenom.focus() ;
+               return false;
+            }
+            if( document.myForm.mdp.value == "" ) {
+               alert( "veuillez entrer votre mdp!" );
+               document.myForm.mdp.focus() ;
+               return false;}
+               if( !document.myForm.mdp.value.match(pass) ) {
+               alert( "mot de pass doit contenir numero/majuscule/miniscule et au moins 8 caracteres" );
+           
+               document.myForm.mdp.focus() ;
+               return false;
+            }
+               if( document.myForm.telephone.value == "" ) {
+               alert( "veuillez entrer votre telephone!" );
+               document.myForm.telephone.focus() ;
+               return false;}  
+
+            
+           
+            
+         }
+      
   </script>
  
   

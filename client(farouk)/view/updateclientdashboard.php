@@ -70,71 +70,32 @@ $list=$client->listClients();
     ?>
 
 <div class="inscription-form">
-<form action="" method="POST" name='inscription-form' id='myForm'>
-            <table border="1" bordercolor="#fd2600" align="center">
-                <tr>
-                    <td>
-                        <label for="id">Id:
-                        </label>
-                    </td>
-                    <td><input type="number" name="id" id="id" value="<?php echo $client['idc']; ?>" maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="nom">Nom:
-                        </label>
-                    </td>
-                    <td><input type="text" name="nom" id="nom" value="<?php echo $client['nom']; ?>" maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="prenom">Prenom:
-                        </label>
-                    </td>
-                    <td><input type="text" name="prenom" id="prenom" value="<?php echo $client['prenom']; ?>" maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="email">email:
-                        </label>
-                    </td>
-                    <td>
-                        <input type="text" name="email" value="<?php echo $client['email']; ?>" id="email">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="mdp">Mot de passe:
-                        </label>
-                    </td>
-                    <td>
-                        <input type="text" name="mdp" value="<?php echo $client['mdp']; ?>" id="mdp">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="telephone">Telephone:
-                        </label>
-                    </td>
-                    <td>
-                        <input type="number" name="telephone" id="telephone" value="<?php echo $client['telephone']; ?>">
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Update">
-                    </td>
-                  
-                </tr>
-                <tr>
-                    <td></td>
+<form action="" method="POST" name='myForm' id='myForm' onsubmit ="return(validate());">
+            
+                    <input type="hidden" name="id" id="id" value="<?php echo $client['idc']; ?>">
+                
+                <p>Nom:</p>
+                    <input type="text" placeholder="Nom" name="nom" id="nom" value="<?php echo $client['nom']; ?>" >
+                    
+                    <p>Prenom:</p>   
+                      
+                    <input type="text" placeholder="Prenom" name="prenom" id="prenom" value="<?php echo $client['prenom']; ?>" >
                    
-                    <td>
-                        <input type="reset" value="Reset">
-                    </td>
-                </tr>
-            </table>
+                    <p>Email:</p>
+                        <input type="text" placeholder="Email" name="email" value="<?php echo $client['email']; ?>" id="email">
+                        
+                        <p>Mot de passe:</p>
+                        <input type="text" placeholder="Mot de passe" name="mdp" value="<?php echo $client['mdp']; ?>" id="mdp">
+                       
+                        <p>Numero de telephone:</p>
+                        <input type="number" placeholder="Numero de telephone" name="telephone" id="telephone" value="<?php echo $client['telephone']; ?>">
+                        
+                        
+                        <button type="submit" value="Update">Update</button>
+                        
+                        <button type="reset" value="Reset">Reset</button>
+                   
+         
         </form>
                         </div>
     <?php
@@ -265,5 +226,62 @@ $list=$client->listClients();
     list.forEach((item)=> 
     item.addEventListener('mouseover',activeLink));
 </script>
+<script type = "text/javascript">
+      
+         var letters = /^[A-Za-z]+$/;
+         var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         // Form validation code will come here.
+         function validate() {
+         
+            if( document.myForm.nom.value == "" ) {
+               alert( "Veuillez entrer votre nom!" );
+             
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( !document.myForm.nom.value.match(letters) ) {
+               alert( "le nom doit contenir que des lettres!" );
+           
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( document.myForm.email.value == "" ) {
+            alert( "Veuillez entrer votre email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+
+            if( document.myForm.prenom.value == "" ) {
+               alert( "veuillez entrer votre prenom!" );
+               document.myForm.prenom.focus() ;
+               return false;}
+               
+               if( !document.myForm.prenom.value.match(letters) ) {
+               alert( "le prenom doit contenir que des lettres!" );
+           
+               document.myForm.prenom.focus() ;
+               return false;
+            }
+            if( document.myForm.mdp.value == "" ) {
+               alert( "veuillez entrer votre mdp!" );
+               document.myForm.mdp.focus() ;
+               return false;}
+               if( !document.myForm.mdp.value.match(pass) ) {
+               alert( "mot de pass doit contenir numero/majuscule/miniscule et au moins 8 caracteres" );
+           
+               document.myForm.mdp.focus() ;
+               return false;
+            }
+               if( document.myForm.telephone.value == "" ) {
+               alert( "veuillez entrer votre telephone!" );
+               document.myForm.telephone.focus() ;
+               return false;}  
+
+            
+           
+            
+         }
+      
+  </script>
 </body>
 </html>

@@ -66,32 +66,87 @@ $list=$client->listClients();
 </head>
 <body>
 <div class="inscription-form">
-<form action="" method="POST" name='inscription-form' id='myForm'>
+<form action="" method="POST" name='myForm'  onsubmit ="return(validate());">
 <p>Nom:</p>
-<input type="text" name="nom" id="nom" pattern="[A-Za-z]+" placeholder="Nom" class="box" title="alphabets seulement" required> <br></br>      
-<p>Prenom:</p>   
-<input type="text" name="prenom" pattern="[A-Za-z]+" placeholder="Prenom" class="box" title="alphabets seulement"  required><br></br>
+<input type="text" name="nom"   placeholder="Nom">     
+<p>Prenom:</p>  
+<input type="text" name="prenom"  placeholder="Prenom" >
 <p>Email:</p>
-<input type="email" name="email"   placeholder="Email" class="box" title="*****@***.**"  required><br></br>
+<input type="email" name="email"   placeholder="Email" class="box" >
 <p>Mot de passe:</p>
-<input type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" class="box" title ="numero/majuscule/miniscule et au moins 8 caracteres"  required><br></br>
-<p>Telephone:</p>
-<input type="tel" name="telephone" pattern="[0-9]+"  placeholder="Telephone" class="box" title="0 a 9"  required><br></br>
-<p>ID ROLE:(1:Admin 2:Client)</p>
-<input type="number" name="idrole" pattern="[1-2]*"  placeholder="(1:Admin 2:Client)" class="box" title="(1:Admin 2:Client)"  required><br></br> 
+<input type="password" name="mdp" placeholder="Mot de passe" >
+<p>Numero de telephone:</p>
+<input type="tel" name="telephone"  placeholder="Telephone" >
+<p>Role:</p>
+<select name="idrole" id="idrole">
+  <option value="1">admin</option>
+  <option value="2">client</option>
+  
+</select>
+<br></br> 
+<br></br>
+<!-- <input type="number" name="idrole" p  placeholder="(1:Admin 2:Client)"><br></br>  -->
 <button type="submit">Ajouter</button>
 </form> 
 </div>
 
-<!-- <select name="client" id="role">
-<?php
-/* foreach($l as $role){
- */?>
-<option> </* $role['idrole'] */</option>
-<?php
-/* } */
-?>
-</select> -->
+<script type = "text/javascript">
+      
+         var letters = /^[A-Za-z]+$/;
+         var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         // Form validation code will come here.
+         function validate() {
+         
+            if( document.myForm.nom.value == "" ) {
+               alert( "Veuillez entrer votre nom!" );
+             
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( !document.myForm.nom.value.match(letters) ) {
+               alert( "le nom doit ne contenir que des lettres!" );
+           
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( document.myForm.email.value == "" ) {
+            alert( "Veuillez entrer votre email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+
+            if( document.myForm.prenom.value == "" ) {
+               alert( "veuillez entrer votre prenom!" );
+               document.myForm.prenom.focus() ;
+               return false;}
+               
+               if( !document.myForm.prenom.value.match(letters) ) {
+               alert( "le prenom doit ne contenir que des lettres!" );
+           
+               document.myForm.prenom.focus() ;
+               return false;
+            }
+            if( document.myForm.mdp.value == "" ) {
+               alert( "veuillez entrer votre mdp!" );
+               document.myForm.mdp.focus() ;
+               return false;}
+               if( !document.myForm.mdp.value.match(pass) ) {
+               alert( "mot de pass doit contenir numero/majuscule/miniscule et au moins 8 caracteres" );
+           
+               document.myForm.mdp.focus() ;
+               return false;
+            }
+               if( document.myForm.telephone.value == "" ) {
+               alert( "veuillez entrer votre telephone!" );
+               document.myForm.telephone.focus() ;
+               return false;}  
+
+            
+           
+            
+         }
+      
+  </script>
 
 
 
@@ -138,6 +193,16 @@ $list=$client->listClients();
       background-color: black;
      
   
+    }
+    select {
+        width: 245px;
+        height :50px;
+       
+    }
+    select:focus {
+        width: 245px;
+        height :50px;
+       
     }
     </style>
     <div class="container">

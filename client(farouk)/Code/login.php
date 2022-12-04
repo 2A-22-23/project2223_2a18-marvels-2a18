@@ -5,6 +5,7 @@ $username ="root";
 $password ="";
 $database ="user";
 $message ="";
+$client=Null;
 
 try{
 $connect =new PDO( "mysql:host=$host; dbname=$database",$username,$password);
@@ -19,11 +20,13 @@ if(isset($_POST["button"]))
 }
 else{
     $query="SELECT * FROM user WHERE email=:email AND mdp=:mdp";
+   /*  $client = $query->fetchAll(); */
     $statement =$connect->prepare($query);
     $statement->execute(
 array(
 'email'=> $_POST["email"],
 'mdp' => $_POST["mdp"],
+/* 'idrole' => $client["idrole"] */
 /* 'id' => $_POST["id"] */
 
 

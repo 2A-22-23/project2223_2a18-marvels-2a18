@@ -23,7 +23,7 @@ if (
         !empty($_POST["idclient"])  */
         
     ) {
-        echo "test";
+       
         $role = new role( 
             $_POST['idrole'],
             $_POST['role']/* ,
@@ -56,8 +56,7 @@ $list=$role->Listerole();
 </head>
 
 <body>
-<!--     <button><a href="affrole.php">Back to list</a></button>
- -->    
+   
 
     <div id="error">
         <?php echo $error; ?>
@@ -71,46 +70,15 @@ $list=$role->Listerole();
     ?>
 <div class="inscription-form">
 
-        <form action="" method="POST">
-            <table border="1" bordercolor="#fd2600" align="center">
-                <tr>
-                    <td>
-                        <label for="idrole">idrole:
-                        </label>
-                    </td>
-                    <td><input type="text" name="idrole" id="idrole" value="<?php echo $role['idrole']; ?>" maxlength="30"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="role">role:
-                        </label>
-                    </td>
-                    <td><input type="text" name="role" id="role" value="<?php echo $role['role']; ?>" maxlength="30"></td>
-                </tr>
-               <!--  <tr>
-                    <td>
-                        <label for="idclient">idclient:
-                        </label>
-                    </td>
-                    <td><input type="number" name="idclient" id="idclient" value=">" maxlength="30"></td>
-                </tr> -->
-                
-                
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Update">
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                    <input type="reset" value="Reset">
-                    </td>
-                </tr>
-                   
-                
-            </table>
+           <form  action="" method="POST" name='myForm' onsubmit = "return(validate());">
+           
+                <input type="hidden" name="idrole" id="idrole" value="<?php echo $role['idrole']; ?>" >
+                <p>Role</p>
+                    <input type="text" name="role" id="role" value="<?php echo $role['role']; ?>" >
+
+                        <button type="submit" value="Update">Update</button>
+
+                    <button type="reset" value="Reset">Reset</button>
         </form>
                         </div>
     <?php
@@ -234,6 +202,33 @@ $list=$role->Listerole();
     list.forEach((item)=> 
     item.addEventListener('mouseover',activeLink));
 </script>
+<script type = "text/javascript">
+      
+         var letters = /^[A-Za-z]+$/;
+         var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         // Form validation code will come here.
+         function validate() {
+         
+            if( document.myForm.role.value == "" ) {
+               alert( "Veuillez remplir le role!" );
+             
+               document.myForm.role.focus() ;
+               return false;
+            }
+            if( !document.myForm.role.value.match(letters) ) {
+               alert( "le role doit ne contenir que des lettres!" );
+           
+               document.myForm.role.focus() ;
+               return false;
+            }
+
+        
+            
+           
+            
+         }
+      
+  </script>
 </body>
 
 </html>

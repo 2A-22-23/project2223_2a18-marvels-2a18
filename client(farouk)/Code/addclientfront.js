@@ -1,44 +1,53 @@
-let lNameInput = document.getElementById("nom");
-let form = document.getElementById("myForm");
 var letters = /^[A-Za-z]+$/;
+         var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+         // Form validation code will come here.
+         function validate() {
+         
+            if( document.myForm.nom.value == "" ) {
+               alert( "Veuillez entrer votre nom!" );
+             
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( !document.myForm.nom.value.match(letters) ) {
+               alert( "le nom doit ne contenir que des lettres!" );
+           
+               document.myForm.nom.focus() ;
+               return false;
+            }
+            if( document.myForm.email.value == "" ) {
+            alert( "Veuillez entrer votre email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
 
-function nameValidation() {
+            if( document.myForm.prenom.value == "" ) {
+               alert( "veuillez entrer votre prenom!" );
+               document.myForm.prenom.focus() ;
+               return false;}
+               
+               if( !document.myForm.prenom.value.match(letters) ) {
+               alert( "le prenom doit ne contenir que des lettres!" );
+           
+               document.myForm.prenom.focus() ;
+               return false;
+            }
+            if( document.myForm.mdp.value == "" ) {
+               alert( "veuillez entrer votre mdp!" );
+               document.myForm.mdp.focus() ;
+               return false;}
+               if( !document.myForm.mdp.value.match(pass) ) {
+               alert( "mot de pass doit contenir numero/majuscule/miniscule et au moins 8 caracteres" );
+           
+               document.myForm.mdp.focus() ;
+               return false;
+            }
+               if( document.myForm.telephone.value == "" ) {
+               alert( "veuillez entrer votre telephone!" );
+               document.myForm.telephone.focus() ;
+               return false;}  
 
-    if (lNameInput.value.length < 3) {
-        lNameError = " Le nom doit compter au moins 3 caractères.";
-        document.getElementById("nomEr1").innerHTML = lNameError;
-
-        return false;
-    }
-    if (!lNameInput.value.match(letters)) {
-        lNameError2 = "Veuillez entrer un nom valid ! (seulement des lettres)";
-        lNameValid2 = false;
-        document.getElementById("nomEr1").innerHTML = lNameError2;
-        return false;
-    }
-    document.getElementById("nomEr1").innerHTML =
-        "<p style='color:green'> Correct </p>";
-
-    return true;
- 
-}
-let lName = document.getElementById("prenom");
-
-function prenomValidation() {
-    if (lName.value.length < 3) {
-        lNameError = " Le prenom doit compter au minimum 3 caractères.";
-        document.getElementById("nomEr2").innerHTML = lNameError;
-
-        return false;
-    }
-    if (!lName.value.match(letters)) {
-        lNameError2 = "Veuillez entrer un nom valid ! (seulement des lettres)";
-        lNameValid2 = false;
-        document.getElementById("nomEr2").innerHTML = lNameError2;
-        return false;
-    }
-    document.getElementById("nomEr2").innerHTML =
-        "<p style='color:green'> Correct </p>";
-
-    return true;
-}
+            
+           
+            
+         }

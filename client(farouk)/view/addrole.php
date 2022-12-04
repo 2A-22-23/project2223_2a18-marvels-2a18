@@ -49,7 +49,7 @@ $list=$role->Listerole();
     <title>User Display</title>
     <link rel="stylesheet" href="role.css">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
-    <script>src="addclientfront.js"</script>
+    <script defer src="./role.js"></script>
     <title>Back with client</title>
 </head>
 
@@ -68,7 +68,7 @@ $list=$role->Listerole();
     <input type="text"  name="role"  id="role">
     <button type="submit">Ajouter</button>
     
-    <script type = "text/javascript">
+    <!-- <script type = "text/javascript">
       var numbers =/^[1-9]+$/;
          var letters = /^[A-Za-z]+$/;
          var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
@@ -104,7 +104,7 @@ $list=$role->Listerole();
             
          }
       
-  </script>
+  </script> -->
                   
     </form> 
  </div>

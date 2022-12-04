@@ -62,6 +62,7 @@ $list=$client->listClients();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <script defer src="../Code/addclientfront.js"></script>
     <title>Back with client</title>
 </head>
 <body>
@@ -90,7 +91,7 @@ $list=$client->listClients();
 </form> 
 </div>
 
-<script type = "text/javascript">
+<!-- <script type = "text/javascript">
       
          var letters = /^[A-Za-z]+$/;
          var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
@@ -146,7 +147,7 @@ $list=$client->listClients();
             
          }
       
-  </script>
+  </script> -->
 
 
 

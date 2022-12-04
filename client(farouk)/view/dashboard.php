@@ -61,12 +61,12 @@
                 </li>
                 
             </ul>
-        </div>
+        <!-- </div>
         <div id="deconnecter"> 
     <form method="POST" action="../Code/index.php">
         <button class="disconnect">Se Deconnecter</button>
     </form>
-</div>
+</div> -->
 <style>
    .disconnect{
     font-size: 18px;

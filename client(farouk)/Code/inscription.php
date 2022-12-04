@@ -94,7 +94,7 @@ body{
   </form> 
   </div>
  
-<script type = "text/javascript">
+<!-- <script type = "text/javascript">
       
          var letters = /^[A-Za-z]+$/;
          var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
@@ -151,7 +151,7 @@ body{
          }
       
   </script>
- 
+  -->
   
 
 </body>

@@ -52,6 +52,7 @@ $list=$role->Listerole();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <script defer src="./role.js"></script>
     <title>User Display</title>
 </head>
 
@@ -202,7 +203,7 @@ $list=$role->Listerole();
     list.forEach((item)=> 
     item.addEventListener('mouseover',activeLink));
 </script>
-<script type = "text/javascript">
+<!-- <script type = "text/javascript">
       
          var letters = /^[A-Za-z]+$/;
          var pass =/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
@@ -228,7 +229,7 @@ $list=$role->Listerole();
             
          }
       
-  </script>
+  </script> -->
 </body>
 
 </html>

@@ -2,7 +2,7 @@ let lNameInput = document.getElementById("nom_categorie");
 var letters = /^[A-Za-z]+$/;
 
 function nameValidation() {
-    alert("test")
+    
     if (lNameInput.value.length < 3) {
         lNameError = " Le nom doit compter au minimum 3 caractères.";
         document.getElementById("nomEr").innerHTML = lNameError;
@@ -22,9 +22,8 @@ function nameValidation() {
 }
 let lName = document.getElementById("nom_categorie");
 
-function namemodel() {
+function nameValidation() {
     if (lName.value.length < 3) {
-        alert("Le nom doit compter au minimum 3 caractères");
         
 
         lNameError = " Le nom doit compter au minimum 3 caractères.";

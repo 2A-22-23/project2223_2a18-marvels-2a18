@@ -76,22 +76,23 @@ $categorieC = new categorieC();
 
     <div class="container">
             <div class="login-box ptb--100">
-                <form method ='POST'>
+                <form onsubmit="return nameValidation()" method ='POST'>
                     
                     <div class="login-form-head">
                         <h4>Categories Addition :) </h4>
-                        <p>Add Categories Here !</p>
+                        <p>Add Categories here !</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
                             
-                            <input  type="text" name="idcategorie" placeholder="entrer l'id categorie" id="idcategorie  " >
+                            <input  type="text" name="idcategorie" placeholder="entrer l'id categorie" id="idcategorie">
                             <i class="ti-email"></i>
                             <div class="text-danger"></div>
                         </div>
                         <div class="form-gp">
                             
-                            <input  type="text" name="nom_categorie" placeholder="entrer le nom de categorie" id="nom_categorie" onkeyup="namemodel()" >
+                            <input  type="text" name="nom_categorie" placeholder="entrer le nom de categorie" id="nom_categorie"  >
+                            <p style="color: red" id="nomEr"></p>
                             <i class="ti-lock"></i>
                             <div class="text-danger"></div>
                         </div>

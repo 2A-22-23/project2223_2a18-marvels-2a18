@@ -118,8 +118,9 @@ if (isset($_GET['nom']) && !empty($_GET['nom'])) {
     </div>
     <style>
        .search{
+        
                 float:right;
-               margin-right: 800px;
+               margin-right: 400px;
                 width:250px;
                 height:280px;
                 

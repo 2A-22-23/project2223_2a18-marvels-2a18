@@ -122,15 +122,17 @@
                                         <td>
                                             <label for="nommarque"> nom de la marque:</label>
                                         </td>
-                                        <td><input type="text" name="nommarque" id="nommarque" value="<?php echo $marque['nommarque']; ?>" maxlength="20"></td>
+                                        <td><input type="text" name="nommarque" id="nommarque" value="<?php echo $marque['nommarque']; ?>" maxlength="20" onkeyup="marque()"></td>
+                                         <td><p style="color: red" id="nomEr"></p></td> 
                                     </tr>
                                     <tr>
                                         <td>
                                             <label for="nommodel">nom du model:</label>
                                         </td>
                                         <td>
-                                            <input type="text" name="nommodel" value="<?php echo $marque['nommodel']; ?>" id="nommodel" maxlength="100">
+                                            <input type="text" name="nommodel" value="<?php echo $marque['nommodel']; ?>" id="nommodel" maxlength="100" onkeyup="model()">
                                         </td>
+                                        <td><p style="color: red" id="nomErr"></p></td> 
                                     </tr>
                                     <tr>
                                         <td>
@@ -171,5 +173,6 @@
             item.addEventListener('mouseover',activeLink));
         </script>
         <?php } ?>
+        <script src="validation.js"></script>
     </body>
 </html>

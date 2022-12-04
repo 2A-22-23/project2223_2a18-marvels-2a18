@@ -130,8 +130,9 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <input type="text" name="nom" id="nom" maxlength="20" placeholder="donner un nom" >
+                                            <input type="text" name="nom" id="nom" maxlength="20" placeholder="donner un nom" onkeyup="piece()"  >
                                         </td>
+                                         <td><p style="color: red" id="nomEr"></p></td> 
                                     </tr>
                                     <tr>
                                         <td>
@@ -208,5 +209,6 @@
             }
             list.forEach((item)=>item.addEventListener('mouseover',activeLink));
         </script>
+        <script src="validation.js"></script>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 
 include_once '../controller/categorieC.php';
- $categorie=new categorieC();
+ $categorie=new categorieC();//from voitures
  if (isset($_GET['nom_categorie']) && !empty($_GET['nom_categorie'])) {
     $list = $categorie->tri($_GET['nom_categorie']);
 } else {

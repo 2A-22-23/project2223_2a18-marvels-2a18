@@ -19,7 +19,18 @@ class categorieC
             die('Error: ' . $e->getMessage());
         }
     }
+    $sql ='SELECT * FROM categorie WHERE nom_categorie LIKE "%'.$recherche.'%" ';
+    $db = config::getConnexion();
+    try {
+        $query = $db->prepare($sql);
+        $query->execute();
 
+        $list = $query->fetchAll();
+        return $list;
+    } catch (Exception $e) {
+        die('Error: ' . $e->getMessage());
+    }
+}
 
 public function listcategorie()
     {

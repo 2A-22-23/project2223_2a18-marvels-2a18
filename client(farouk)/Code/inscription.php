@@ -69,23 +69,23 @@ body{
 }
 </style>
 
-    <form onsubmit="return prenomValidation()"  action="" method="POST" name='inscription-form' id='myForm'>
+    <form onsubmit="return Validate()"  action="" method="POST" name='inscription-form' name='myForm'>
     <!-- <label>Nom:</label> -->
     <input type="text" name="nom" id="nom" placeholder="Nom" class="box" title="alphabets seulement" > <br></br>     
     <p style="color: red" id="nomEr1"></p>
     <br><br>
 
    <!--  <label>Prenom:</label>    -->
-    <input type="text" name="prenom" id="prenom" pattern="[A-Za-z]+" placeholder="Prenom" class="box" title="alphabets seulement"  ><br></br>
+    <input type="text" name="prenom" id="prenom" ><br></br>
     <p style="color: red" id="nomEr2"></p>
     <br><br>
     <!--  <label>Email:</label> -->
-    <input type="email" name="email"   placeholder="Email" class="box" title="*****@***.**"  required><br></br>
+    <input type="email" name="email" ><br></br>
     <!-- <label>Mot de passe:</label> -->
     <br><br>
-    <input type="password" name="mdp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" class="box" title ="numero/majuscule/miniscule et au moins 8 caracteres"  required><br></br>
+    <input type="password" name="mdp" ><br></br>
    <!--  <label>Telephone:</label> --><br><br>
-    <input type="tel" name="telephone" pattern="[0-9]+"  placeholder="Telephone" class="box" title="0 a 9"  required><br></br>
+    <input type="tel" name="telephone"><br></br>
     <button type="submit">S'inscrire
         
     </button>
@@ -93,6 +93,34 @@ body{
 
   </form> 
   </div>
+  <script>
+function validate() {
+      
+      if( document.myForm.nom.value == "" ) {
+         alert( "remplir votre nom!" );
+         document.myForm.nom.focus() ;
+         return false;
+      }
+      if( document.myForm.prenom.value == "" ) {
+         alert( "remplir votre prenom!" );
+         document.myForm.prenom.focus() ;
+         return false;
+      }
+     /*  if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+         document.myForm.Zip.value.length != 5 ) {
+         
+         alert( "Please provide a zip in the format #####." );
+         document.myForm.Zip.focus() ;
+         return false;
+      }
+      if( document.myForm.Country.value == "-1" ) {
+         alert( "Please provide your country!" );
+         return false;
+      }
+      return( true ); */
+   }
+
+  </script>
  
   
 

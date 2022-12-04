@@ -7,7 +7,7 @@ echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 /* <div></div> */
 
 
-}
+
 
 
 
@@ -56,7 +56,7 @@ echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 </div>
 <div id="login-btn"> --> 
 <div id="inscription-btn"> 
-    <form method="POST" action="./index.php">
+    <form method="POST" action="./logout.php">
         <button class="btn">Se Deconnecter</button>
     </form>
 </div>
@@ -385,3 +385,6 @@ echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>';
 </body>
 
 </html>
+<?php
+}
+?>

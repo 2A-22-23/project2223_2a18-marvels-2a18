@@ -13,8 +13,8 @@ if(isset($_POST["button"]))
 {
     if(empty($_POST["email"]) || empty($_POST["mdp"])   )
 {
-    $message='<label>Veuillez remplir tout les champs</label>';
-
+    $message='<script>alert("Veuillez remplir tout les champs");</script>';
+/* <label>Veuillez remplir tout les champs</label> */
 
 }
 else{
@@ -44,8 +44,8 @@ array(
 }
 else
 {
-$message='<label>Email ou mot de passe incorrect</label>';
-
+$message='<script>alert("email et/ou mot de passe incorrect(s)");</script>';
+/* <label>email et/ou mot de passe incorrect(s)</label> */
 }
     }
 }       

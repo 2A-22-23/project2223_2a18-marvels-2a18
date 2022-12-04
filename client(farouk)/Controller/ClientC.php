@@ -108,9 +108,9 @@ class ClientC
             die('Error: ' . $e->getMessage());
         }
     } 
-    /* function showuser1($email,$mdp)
+    function showuser1($email,$mdp)
     {
-        $sql = "SELECT * from user where nom = '$email' AND mot_de_passe ='$mdp'";
+        $sql = "SELECT * from user where email = '$email' AND mdp ='$mdp'";
         $db = config::getConnexion();
         try {
             $query = $db->prepare($sql);
@@ -124,7 +124,7 @@ class ClientC
     }
     function showuser2($email,$mdp)
     {
-        $sql = "SELECT * from user where iduser = '$email' AND mot_de_passe ='$mdp'";
+        $sql = "SELECT * from user where email = '$email' AND mdp ='$mdp'";
         $db = config::getConnexion();
         try {
             $query = $db->prepare($sql);
@@ -135,5 +135,5 @@ class ClientC
         } catch (Exception $e) {
             die('Error: ' . $e->getMessage());
         }
-    } */
+    } 
 }

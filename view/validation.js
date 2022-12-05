@@ -4,7 +4,7 @@ let upmodel = document.getElementById("nommodel");
 let lName = document.getElementById("model");
 let n = document.getElementById("nom");
 let m = document.getElementById("nompiece");
-var letters = /^[A-Za-z]+$/;
+var letters = /^[A-Za-z]+$+" "/;
 
 function nameValidation() {
     if (lNameInput.value.length < 3) {

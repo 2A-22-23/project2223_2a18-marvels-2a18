@@ -201,7 +201,6 @@
                                         </td>
                                     </tr>
                                 </table>
-
                                 
                             </form>
                             
@@ -233,8 +232,5 @@
         </script>
         <script src="validation.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      </head>
-        
-    
     </body>
 </html>

@@ -46,12 +46,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="search_marque.php">
-                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
-                            <span class="title">search</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="#">
                             <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
                             <span class="title">Help</span>

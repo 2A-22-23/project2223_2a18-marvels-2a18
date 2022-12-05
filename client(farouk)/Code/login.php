@@ -1,4 +1,5 @@
 <?php
+include '../Controller/ClientC.php  ';
 session_start();
 $host ="localhost";
 $username ="root";
@@ -33,17 +34,26 @@ array(
 )
 
     );
+    $userFetched=$statement->fetchAll();
+    $utab=$userFetched[0];
+   /*  var_dump($utab); */
+    /* echo $userFetched['idrolee']; */
+    /* foreach($utab as $key => $value) {
+      echo 'value' . idrolee . '"key' . $key . '<br>';
+      
+    } */
+    
     $count=$statement->rowCount();
     if($count >0)
-    { if($user["idrole"] ==1){
-        $_SESSION["email"]=$user["email"];
+    { if($utab["idrolee"] ==1){
+        $_SESSION["email"]=$_POST["email"];
       header("location:../view/dashboard.php");
    }else 
    {
         
         
         $_SESSION["email"]=$_POST["email"];
-        header("location:indexx.php");}
+       header("location:indexx.php"); }
 }
 else
 {

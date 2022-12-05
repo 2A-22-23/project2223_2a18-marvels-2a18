@@ -1,6 +1,8 @@
 <?php
     include '../Controller/piecesc.php';
     include '../Controller/marquec.php';
+    require('reCaptha/autoload.php');
+
     $error = "";
     // create client
     $piece = null;
@@ -24,7 +26,8 @@
             !empty($_POST["description"]) &&
             !empty($_POST["prix"]) &&
             !empty($_POST["marque"]) &&
-            !empty($_POST["qte"])
+            !empty($_POST["qte"])&&
+            !empty($_POST["g-recaptcha-response"])
         ) {
             echo('salam');
             $piece = new piece(
@@ -42,6 +45,24 @@
         } else
             $error = "Missing information";
     }
+    if(isset($_POST['submitpost'])){
+        if(isset($_POST['g-recaptcha-response'])){
+    
+        $recaptcha = new \ReCaptcha\ReCaptcha('6LfkrVcjAAAAANaCkPzaDvoE8PyE5ysqJ-gRYx3j');
+        $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
+    if ($resp->isSuccess()) {
+        
+        var_dump('Captcha valide');
+        // Verified!
+        } else {
+            $errors = $resp->getErrorCodes();
+            var_dump('Captcha invalide');
+            var_dump($errors);
+    }
+            }else{
+            var_dump('captcha non rempli');
+        }
+        }
 ?>
 
 <!DOCTYPE html>
@@ -167,6 +188,10 @@
                                             </select>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <form  method="POST">
+                                        <div class="g-recaptcha" data-sitekey="6LfkrVcjAAAAAMxHVb3y4jI1aKhBo2gIHp1IrEZq"></div>
+                                    </tr>
                                     <tr align="center">
                                         <td>
                                             <input type="submit" value="Save" class="btn">
@@ -176,7 +201,10 @@
                                         </td>
                                     </tr>
                                 </table>
+
+                                
                             </form>
+                            
                         </div>   
                     </div>
                 </div>
@@ -204,5 +232,9 @@
             list.forEach((item)=>item.addEventListener('mouseover',activeLink));
         </script>
         <script src="validation.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      </head>
+        
+    
     </body>
 </html>

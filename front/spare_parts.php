@@ -108,57 +108,6 @@
                     <?php
                         }
                     ?>
-
-                    <!-- <td>
-                        <div class="swiper-slide box">
-                            <img src="vehicle-2.png" alt="">
-                            <div class="content">
-                                <h3>jante Skoda</h3>
-                                <div class="price"> <span>prix : </span> 60DT </div>
-                                <p>
-                                    occasion
-                                    <span class="fas fa-circle"></span> etat excellent
-                                    <span class="fas fa-circle"></span> compatible avec polo
-                                </p>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
-                    </td>
-                    <td>
-                        <div class="swiper-slide box">
-                            <img src="vehicle-3.png" alt="">
-                            <div class="content">
-                                <h3>feu dmax</h3>
-                                <div class="price"> <span>prix : </span> 450DT </div>
-                                <p>
-                                    tout neuf
-                                    <span class="fas fa-circle"></span>Isuzu
-                                    <span class="fas fa-circle"></span>gauche
-                                    <span class="fas fa-circle"></span>arriére
-                                </p>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="swiper-slide box">
-                            <img src="vehicle-4.png" alt="">
-                            <div class="content">
-                                <h3>pneus BMW</h3>
-                                <div class="price"> <span>prix : </span> 250DT </div>
-                                <p>
-                                    neuf
-                                    <span class="fas fa-circle"></span> etat excellent
-                                    <span class="fas fa-circle"></span> Avec jante
-                                    <span class="fas fa-circle"></span> x7
-                                </p>
-                                <a href="#" class="btn">check out</a>
-                            </div>
-                        </div>
-
-                    </td> -->
-
                 </table>
             </div>
 

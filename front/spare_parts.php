@@ -1,3 +1,9 @@
+<?php
+    include_once '../Controller/piecesc.php';
+    $pieceC=new piecec();
+    $listepieces=$pieceC->listpieces();
+
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +18,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 <!--custom css file link-->
 <link rel="stylesheet" href="style.css">
-
-
 
 <body>
 
@@ -85,23 +89,27 @@
 
             <div class="swiper-wrapper">
                 <table>
+                <?php
+                    foreach($listepieces as $piece) {
+                ?>
                     <td>
                         <div class="swiper-slide box">
                             <img src="vehicle-1.png" alt="">
                             <div class="content">
-                                <h3>moteur clio bombe</h3>
-                                <div class="price"> <span>prix : </span> 1200DT </div>
+                                <h3> <?php echo $piece['nompiece']; ?></h3>
+                                <div class="price"> <span>prix : </span> <?php echo $piece['prix']; ?> <span> DT </span> </div>
                                 <p>
-                                    occasion
-                                    <span class="fas fa-circle"></span> Boite vitesse manuelle
-                                    <span class="fas fa-circle"></span> Essence
-                                    <span class="fas fa-circle"></span> 213KM
+                                <?php echo $piece['description']; ?>
                                 </p>
-                                <a href="check1.html" class="btn">check out</a>
+                                <a href="#" class="btn">check out</a>
                             </div>
                         </div>
                     </td>
-                    <td>
+                    <?php
+                        }
+                    ?>
+
+                    <!-- <td>
                         <div class="swiper-slide box">
                             <img src="vehicle-2.png" alt="">
                             <div class="content">
@@ -149,13 +157,9 @@
                             </div>
                         </div>
 
-                    </td>
+                    </td> -->
 
                 </table>
-
-
-
-
             </div>
 
             <div class="swiper-pagination"></div>

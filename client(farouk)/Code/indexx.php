@@ -387,4 +387,10 @@ if(isset($_SESSION["email"]))
 </html>
 <?php
 }
+
+else
+{
+    echo "veuillez se connecter";
+    header('Location:login.php');
+}
 ?>

@@ -112,9 +112,9 @@ echo '<label class="text-danger">'.$message.'</label>';
 
     <form onsubmit="return nameValidation()"  action="" method="POST" name='inscription-form' id='myForm'>
    <!--  <label>Email:</label> -->
-    <input type="email" name="email"   placeholder="Email" class="box" title="*****@***.**"  ><br></br>
+    <input type="email" name="email"   placeholder="email" class="box" title="*****@***.**"  ><br></br>
     <!-- <label>Mot de passe:</label> -->
-    <input type="password" name="mdp"  placeholder="Mot de passe" class="box" title ="numero/majuscule/miniscule et au moins 8 caracteres"  ><br></br>
+    <input type="password" name="mdp"  placeholder="mot de passe" class="box" title ="numero/majuscule/miniscule et au moins 8 caracteres"  ><br></br>
    
     <input type="submit" value="Connecter" name="button">
 

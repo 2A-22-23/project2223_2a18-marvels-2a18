@@ -47,12 +47,17 @@ array(
     if($count >0)
     { if($utab["idrolee"] ==1){
         $_SESSION["email"]=$_POST["email"];
+        $_SESSION["mdp"]=$utab["mdp"];
+        $_SESSION["id"]=$utab["idc"];
+        var_dump( $_SESSION["id"]);
       header("location:../view/dashboard.php");
    }else 
    {
         
         
         $_SESSION["email"]=$_POST["email"];
+        $_SESSION["mdp"]=$utab["mdp"];
+        $_SESSION["id"]=$utab["idc"];
        header("location:indexx.php"); }
 }
 else

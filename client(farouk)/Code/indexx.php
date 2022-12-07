@@ -3,7 +3,9 @@ session_start();
 if(isset($_SESSION["email"]))
 {
 /* echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>'; */
-
+echo $_SESSION["email"];
+echo $_SESSION["mdp"];
+echo $_SESSION["id"];
 /* <div></div> */
 
 

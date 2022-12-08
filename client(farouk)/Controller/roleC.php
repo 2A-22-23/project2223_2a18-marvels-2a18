@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+include_once '../config.php';
 include '../model/role.php';
 
 class roleC
@@ -16,11 +16,22 @@ public function Listerole()
             die('Error:' . $e->getMessage());
         }
     }
+    public function Listerole1()
+    {
+        $sql = "SELECT idrole FROM role";
+        $db = config::getConnexion();
+        try {
+            $liste = $db->query($sql);
+            return $liste;
+        } catch (Exception $e) {
+            die('Error:' . $e->getMessage());
+        }
+    }
     function addrole ($role)
     { 
         
         $sql = "INSERT INTO role 
-        VALUES (:i,:n,:c)";
+        VALUES (:i,:n)";//,:c
         $db = config::getConnexion(); //fonction statique
         try {
             
@@ -28,7 +39,7 @@ public function Listerole()
             $query->execute([
                 'i' => $role->idrole,
                 'n' => $role->role,
-                'c' => $role->idclient,
+                /* 'c' => $role->idclient, */
                
             ]);
         } catch (Exception $e) {
@@ -55,15 +66,15 @@ public function Listerole()
             $query = $db->prepare(
                 'UPDATE role SET 
                     idrole=:idrole,
-                    role = :role, 
-                    idclient = :idclient
-                    
+                    role = :role
+/*                     idclient = :idclient
+ */                    
                 WHERE idrole= :idrole'
             );
             $query->execute([
                 'idrole' => $id,
-                'role' => $role->role,
-                'idclient' => $role->idclient
+                'role' => $role->role
+               // 'idclient' => $role->idclient
                 
             ]);
             echo $query->rowCount() . " records UPDATED successfully <br>";

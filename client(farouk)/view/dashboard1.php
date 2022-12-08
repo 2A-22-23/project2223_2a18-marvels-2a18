@@ -85,8 +85,8 @@ $list=$client->listClients();
                                 <div class="recentorders">
                                     <div class="cardheader">
                                         <h2>client</h2>
-                                        <a href="addClient.php" class="btn">Ajouter</a>
-                                        <a href="searchclient.php" class="btn">Search</a>
+                                        <a href="addclientdashboard.php" class="btn">Ajouter</a>
+                                        <a href="searchclient1.php" class="btn">Search</a>
                                     </div>
                                     <table>
                                    
@@ -94,8 +94,8 @@ $list=$client->listClients();
                                          <tr>
                                          <td>Nom</td>
                                             <td>Prenom</td>
-                                            <td>Email</td>
-                                            <td>Mot de passe</td>
+                                            <!-- <td>Email</td>
+                                            <td>Mot de passe</td> -->
                                             <td>Telephone</td>
                                             <td>Modifier</td>
                                             <td>Supprimer</td>
@@ -109,22 +109,21 @@ $list=$client->listClients();
                                         <tr>
                                            <td> <?php echo $client['nom']; ?></td>
                                            <td> <?php echo $client['prenom']; ?></td>
-                                           <td> <?php echo $client['email']; ?></td>
-                                           <td> <?php echo $client['mdp']; ?></td>
+                                           <!-- <td> <?php echo $client['email']; ?></td>
+                                           <td> <?php echo $client['mdp']; ?></td> -->
                                            <td> <?php echo $client['telephone']; ?></td>
                                         
                                            <td>
-                                            <form method="post" action="updateClient.php">
+                                            <form method="post" action="updateclientdashboard.php">
 						                     <input type="submit" class="btn modif" name="Modifier" value="Modifier">
 						                     <input type="hidden" value=<?PHP echo $client['idc']; ?> name="id">
 					                        </form>
                                           </td>
 
                                            <td> 
-                                           <form method="post" action="deleteClient.php">
-						                     <input type="submit" class="btn supp" name="Supprimer" value="Supprimer">
-						                     <input type="hidden" value=<?PHP echo $client['idc']; ?> name="id">
-					                        </form> 
+                                          
+                                            <button class="btn modif"> <a href="deleteClient.php?id=<?php echo $client['idc']; ?>">Supprimer</a></button>
+                                           
                                            </td>
                                            </tr>
                                            <?php
@@ -133,6 +132,7 @@ $list=$client->listClients();
                                     </tbody>
                                     </table>
                                 </div>
+                                
                                 
                           
 

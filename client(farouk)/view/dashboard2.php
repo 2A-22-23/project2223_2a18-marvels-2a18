@@ -86,7 +86,7 @@ $list=$role->Listerole();
                                     <div class="cardheader">
                                         <h2>role</h2>
                                         <a href="addrole.php" class="btn">Ajouter</a>
-                                        <a href="searchrole.php" class="btn">Search</a>
+                                       
                                     </div>
                                     <table>
                                    
@@ -94,9 +94,13 @@ $list=$role->Listerole();
                                          <tr>
                                          <td>Id role</td>
                                             <td>ROLE</td>
-                                            <td>ID role</td>
-                                            <td>Update</td>
-                                            <td>Delete</td>
+                                                                                        
+                                            
+
+                                            <td>Modifier</td>
+                                          
+
+                                            <td>Supprimer</td>
                                           </tr>
                                         </thead>
                                        
@@ -107,20 +111,20 @@ $list=$role->Listerole();
                                         <tr>
                                         <td><?= $role['idrole']; ?></td>
                                         <td><?= $role['role']; ?></td>
-                                        <td><?= $role['idclient']; ?></td>
                                         
+
                                            <td>
                                            <form method="POST" action="updaterole.php">
-                                           <input type="submit" class="btn modif" name="Modifier" value="Modifier">
-                        <input type="hidden" value=<?PHP echo $role['idrole']; ?> name="id">
+                                           <input type="submit" class='btn modifie' name="update" value="Update">
+                                           <input type="hidden" value=<?PHP echo $role['idrole']; ?> name="idrole">
                     </form>
-                                          </td>
+                                           
+                                           <td align="center">
+                    <form method="POST" action="deleterole.php">
+                        <input type="submit" class="btn modifie" name="delete" value="delete">
+                        <input type="hidden" value=<?PHP echo $role['idrole']; ?> name="idrole">
+                    </form>
 
-                                           <td> 
-                                           <form method="post" action="deleterole.php">
-						                     <input type="submit" class="btn supp" name="Supprimer" value="Supprimer">
-						                     <input type="hidden" value=<?PHP echo $role['idrole']; ?> name="id">
-					                        </form> 
                                            </td>
                                            </tr>
                                            <?php
@@ -129,6 +133,7 @@ $list=$role->Listerole();
                                     </tbody>
                                     </table>
                                 </div>
+                                
                                 
                           
 

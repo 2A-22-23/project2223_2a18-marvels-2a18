@@ -80,10 +80,16 @@ $list=$client->listClients();
 <input type="tel" name="telephone"  placeholder="Telephone" >
 <p>Role:</p>
 <select name="idrole" id="idrole">
+<?php foreach ($l as $role ){?>
+     <option value="<?= $role['idrole']?>"><?= $role['idrole']?></option>
+       <?php }?>
+</select>
+
+<!-- <select name="idrole" id="idrole">
   <option value="1">admin</option>
   <option value="2">client</option>
   
-</select>
+</select> -->
 <br></br> 
 <br></br>
 <!-- <input type="number" name="idrole" p  placeholder="(1:Admin 2:Client)"><br></br>  -->

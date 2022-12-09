@@ -24,13 +24,13 @@ $list=$client->listClients();
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="../../dashboard.php"">
+                    <a href="../../dashboard.php">
                         <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
                         <span class="title">Marvels Auto</span>
                     </a>
                 </li>
                 <li>
-                    <a href="../../dashboard.php"">
+                    <a href="../../dashboard.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -96,10 +96,11 @@ $list=$client->listClients();
                                    
                                         <thead>
                                          <tr>
+                                         <td>Id</td>
                                          <td>Nom</td>
                                             <td>Prenom</td>
-                                            <!-- <td>Email</td>
-                                            <td>Mot de passe</td> -->
+                                            <td>Email</td>
+                                            <td>Mot de passe</td>
                                             <td>Telephone</td>
                                             <td>Modifier</td>
                                             <td>Supprimer</td>
@@ -111,10 +112,11 @@ $list=$client->listClients();
                 foreach($list as $client) {
              ?>
                                         <tr>
+                                        <td> <?php echo $client['idc']; ?></td>
                                            <td> <?php echo $client['nom']; ?></td>
                                            <td> <?php echo $client['prenom']; ?></td>
-                                           <!-- <td> <?php echo $client['email']; ?></td>
-                                           <td> <?php echo $client['mdp']; ?></td> -->
+                                         <td> <?php echo $client['email']; ?></td>
+                                           <td> <?php echo $client['mdp']; ?></td> 
                                            <td> <?php echo $client['telephone']; ?></td>
                                         
                                            <td>

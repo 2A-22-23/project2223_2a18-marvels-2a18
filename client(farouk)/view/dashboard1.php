@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION["email"]))
+{
+
  //include_once '../Model/Client.php';
  include_once '../Controller/ClientC.php';
  $client=new ClientC();
@@ -20,13 +24,13 @@ $list=$client->listClients();
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php"">
                         <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
                         <span class="title">Marvels Auto</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php"">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -163,3 +167,12 @@ $list=$client->listClients();
 </script>
 </body>
 </html>
+<?php
+}
+
+else
+{
+    echo "veuillez se connecter";
+    header('Location:../Code/login.php');
+}
+?>

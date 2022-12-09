@@ -1,4 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION["email"]))
+{
 
+
+
+
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +19,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <title>Back with client</title>
-    
+    <div id="deconnecter"> 
+    <form method="POST" action="../Code/logout.php">
+        <button class="btn">Se Deconnecter</button>
+    </form>
+
+</div>
 
 </head>
 <body>
@@ -23,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -124,3 +140,12 @@
 </script>
 </body>
 </html>
+<?php
+}
+
+else
+{
+    echo "veuillez se connecter";
+    header('Location:../Code/login.php');
+}
+?>

@@ -4,7 +4,7 @@ session_start();
 $host ="localhost";
 $username ="root";
 $password ="";
-$database ="user";
+$database ="marvels auto";
 $message ="";
 $client=Null;
 
@@ -58,7 +58,7 @@ array(
         $_SESSION["email"]=$_POST["email"];
         $_SESSION["mdp"]=$utab["mdp"];
         $_SESSION["id"]=$utab["idc"];
-       header("location:indexx.php"); }
+       header("location:../../fatma/FRONT/view/index.php"); }
 }
 else
 {

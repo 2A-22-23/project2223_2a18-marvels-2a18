@@ -20,13 +20,13 @@ $list=$role->Listerole();
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php"">
                         <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
                         <span class="title">Marvels Auto</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php"">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>

@@ -115,6 +115,7 @@ echo '<label class="text-danger">'.$message.'</label>';
 }
 ?>
 
+
     <form onsubmit="return nameValidation()"  action="" method="POST" name='inscription-form' id='myForm'>
    <!--  <label>Email:</label> -->
     <input type="email" name="email"   placeholder="email" class="box" title="*****@***.**"  ><br></br>
@@ -123,8 +124,9 @@ echo '<label class="text-danger">'.$message.'</label>';
    
     <input type="submit" value="Connecter" name="button">
 
-
+    
   </form> 
+  <label for=""><a href="inscription.php">Vous n'avez pas de compte inscrivez ici</a></label>
   </div>
  
   

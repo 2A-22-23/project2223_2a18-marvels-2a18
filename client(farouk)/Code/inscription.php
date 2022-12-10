@@ -90,8 +90,9 @@ body{
         
     </button>
     <br><br>
-
+    <label for=""><a href="login.php">Vous avez deja un compte "Connectez vous"</a></label>
   </form> 
+ 
   </div>
  
 <!-- <script type = "text/javascript">

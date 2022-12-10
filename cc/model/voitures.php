@@ -84,7 +84,18 @@ class voitures
         return $this;
     }
 
-    
+    /**
+     * Set the value of qte
+     *
+     * 
+     */
+    public function seturl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    } 
+
 }
 
 

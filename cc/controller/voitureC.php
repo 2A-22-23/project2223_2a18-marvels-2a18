@@ -32,6 +32,7 @@ public function Listevoiture()
                 'n' => $voitures->nom_voiture,
                 'k' => $voitures->idcategorie,
                 'c' => $voitures->prix,
+                'url' => $voitures->url
                
             ]);
         } catch (Exception $e) {

@@ -6,6 +6,29 @@ $error = "";
 
 // create voiture
 $voitures = null;
+if (isset($_FILES['image']) && $_FILES['image']['error'] == 0)
+    {
+            // Testons si le fichier n'est pas trop gros
+            if ($_FILES['image']['size'] <= 8000000)
+            {
+                    // Testons si l'extension est autorisée
+                    $fileInfo = pathinfo($_FILES['image']['name']);
+
+                    $extension = $fileInfo['extension'];
+                    $allowedExtensions = ['jpg', 'jpeg', 'png'];
+
+                    $_FILES['image']['name']=$_POST["nom_voiture"].'.'.$extension;
+                   
+                    if (in_array($extension, $allowedExtensions))
+                    {
+                            // On peut valider le fichier et le stocker définitivement
+                            move_uploaded_file($_FILES['image']['tmp_name'], '../uploads/' . basename($_FILES['image']['name']));
+                            $url = basename($_FILES['image']['name']);
+            
+                    }
+            }
+            
+    }
 
 if (
     isset($_POST["idvoiture"])&&

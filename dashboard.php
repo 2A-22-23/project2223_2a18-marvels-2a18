@@ -16,12 +16,7 @@ if(isset($_SESSION["email"]))
 
 </head>
 <body>
-<div id="deconnecter"> 
-    <form method="POST" action="client(farouk)/Code/logout.php">
-        <button class="btn">Se Deconnecter</button>
-    </form>
-//dd
-</div>
+
     
     <div class="container">
         <div class="navigation">
@@ -76,7 +71,7 @@ if(isset($_SESSION["email"]))
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="client(farouk)/Code/logout.php">
                         <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
                         <span class="title">Sing Out</span>
                     </a>

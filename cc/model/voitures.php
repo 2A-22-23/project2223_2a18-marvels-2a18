@@ -5,6 +5,7 @@ class voitures
     public ?string $nom_voiture = null;
     public ?string $idcategorie = null;
     public ?string $prix = null;
+    public ?string $url = null;;
    
 
     public function __construct($i,$n,$k,$c)
@@ -13,6 +14,7 @@ class voitures
         $this->nom_voiture =$n;
         $this->idcategorie =$k;
         $this->prix =$c;
+        $this->url =$url;
         
     }
      /**

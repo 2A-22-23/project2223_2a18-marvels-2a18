@@ -19,12 +19,7 @@ if(isset($_SESSION["email"]))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <title>Back with client</title>
-    <div id="deconnecter"> 
-    <form method="POST" action="../Code/logout.php">
-        <button class="btn">Se Deconnecter</button>
-    </form>
-
-</div>
+    
 
 </head>
 <body>

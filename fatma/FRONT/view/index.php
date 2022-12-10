@@ -2,10 +2,12 @@
 session_start();
 if(isset($_SESSION["email"]))
 {
+    require 'C:\xampp\htdocs\project2223_2a18-marvels-2a18\webtest\model\DB.php';
+$DB= new DB();
 /* echo '<h3>Connection reussite' .$_SESSION["email"].'<h3>'; */
-echo $_SESSION["email"];
+/* echo $_SESSION["email"];
 echo $_SESSION["mdp"];
-echo $_SESSION["id"];
+echo $_SESSION["id"]; */
 /* <div></div> */
  include '../Model/Reclamation.php';
  include '../Controller/ReclamationC.php';
@@ -32,16 +34,23 @@ echo $_SESSION["id"];
     <title> Document</title> 
 
     <link rel="stylesheet" type="text/css" href="dashboard.css"> 
-   
-
-</head> 
-<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 <!--fonts-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 <!--custom css file link--> 
 <link rel="stylesheet" href="style.css"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<!--fonts-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<!--custom css file link--> 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+<!--custom css file link-->  
+
+</head> 
+  
 
 
 
@@ -59,11 +68,12 @@ echo $_SESSION["id"];
     <span>Marvels</span>Auto </a> 
  <nav class="navbar">
 <a href="#home"> Home </a>
-<a href="#vehicles"> Vehicles </a>
+
 <a href="#services"> Services </a>
 <a href="#reviews"> Reviews </a>
 <a href="#contact"> Contact </a>
-
+<a href="../../../webtest/front/spare_parts.php">Spare Parts </a>
+<a href="../../../webtest/front/cars.php"> Vehicles </a>
  </nav>
  <form method="POST" action="../../../client(farouk)/Code/logout.php">
         <button class="btn">Se Deconnecter</button>
@@ -77,7 +87,7 @@ echo $_SESSION["id"];
 <!--FATMA debut*****************************************************************-->
 
 
-<a href="#" role="button" data-target="#modal2" data-toggle="modal">Reclamation</a>
+<a href="#" role="button" class ="btn" data-target="#modal2" data-toggle="modal">Reclamation</a>
 
 <!-- Modale -->
 <div class="modal" id="modal2" role="dialog">
@@ -155,7 +165,9 @@ En vous remerciant pour votre compréhension et en comptant sur votre fidélité
 
 <!--FATMA fin*****************************************************************-->
 <!--FATMA fin*****************************************************************-->
-
+<form action="../../../webtest/view/sheet.php">
+    <button  style="font-size:24px">CART <i class="fa fa-shopping-cart"></i></button>
+    </form>
 
 </header>
 <!--header section ends-->
@@ -363,50 +375,21 @@ En vous remerciant pour votre compréhension et en comptant sur votre fidélité
 <!--service section-->
 
 
-
-
 <section class="services" id="services">
-
-    <h1 class="heading"> our <span>services</span> </h1>
-
+<h1 class="heading"> our <span> departments </span> </h1>
+<?php $department = $DB->query('SELECT * from department') ?>
+      <?php foreach ($department as $department ) { ?>
     <div class="box-container">
-
         <div class="box">
-            <i class="fas fa-car"></i>
-            <h3>Car selling</h3>
-            <p>With Marvels Auto, you can purchase any car you dream of, whether it's a classic rare car or a sports. We make your wish come true.</p>
-            <a href="#" class="btn"> read more</a>
+            <i class="fas fa-car" <?php echo $department->idDep; ?>></i>
+            <h3><?php echo $department->nameDep; ?></h3>
+            <p> <?php echo $department->description; ?></p>
+            <a href="../../../webtest/view/front/ServiceDep.php" class="btn"> read more</a>
+        </div>
+        <?php }?>
         </div>
 
-        <div class="box">
-            <i class="fas fa-tools"></i>
-            <h3>Car repair</h3>
-            <p>Marvels Auto offers you a wide option of car parts, we import from all over the world, we help you to find to part you need to fix your car.</p>
-            <a href="#" class="btn"> read more</a>
-        </div>
-
-       
-
-        <div class="box">
-            <i class="fas fa-car-battery"></i>
-            <h3>Battery replacement</h3>
-            <p>Car battery replacement is another convenient MarvelsAuto service available to help members resolve an inconvenient breakdown.</p>
-            <a href="#" class="btn"> read more</a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-gas-pump"></i>
-            <h3>Oil change</h3>
-            <p> Get your oil changed quickly and professionally to the highest industry, we chose the perfect oil for your ride.</p>
-            <a href="#" class="btn"> read more</a>
-        </div>
-
-     
-    </div>
-
-</section>
-
-
+</section> 
 
 <!--services secrtion ends-->
 

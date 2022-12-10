@@ -1,4 +1,8 @@
-
+<?php
+session_start();
+if(isset($_SESSION["email"]))
+{
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,11 +11,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./client(farouk)/view/dashboard.css">
-    <title>Back with client</title>
+    <title>Back admin</title>
     
 
 </head>
 <body>
+<div id="deconnecter"> 
+    <form method="POST" action="client(farouk)/Code/logout.php">
+        <button class="btn">Se Deconnecter</button>
+    </form>
+
+</div>
     
     <div class="container">
         <div class="navigation">
@@ -31,7 +41,7 @@
                 <li>
                     <a href="client(farouk)/view/dashboard.php">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                        <span class="title">client/Role</span>
+                        <span class="title">user/Role</span>
                     </a>
                 </li>
                 <li>
@@ -42,15 +52,27 @@
                 </li>
              
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
-                        <span class="title">Help</span>
+                    <a href="./webtest/view/dashboardc1.php">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Piece/Model</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                        <span class="title">Settings</span>
+                    <a href="./webtest/view/dashboard.php">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">commandes/lignecommandes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="webtest\view\dashboardv1.php">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Voitures/Categories</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="webtest\view\dashboards.php">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Services/Departement</span>
                     </a>
                 </li>
                 <li>
@@ -124,3 +146,12 @@
 </script>
 </body>
 </html>
+<?php
+}
+
+else
+{
+    echo "veuillez se connecter";
+    header('Location:client(farouk)/Code/login.php');
+}
+?>

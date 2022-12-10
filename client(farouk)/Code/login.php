@@ -4,7 +4,7 @@ session_start();
 $host ="localhost";
 $username ="root";
 $password ="";
-$database ="marvels auto";
+$database ="marvels";
 $message ="";
 $client=Null;
 
@@ -50,7 +50,7 @@ array(
         $_SESSION["mdp"]=$utab["mdp"];
         $_SESSION["id"]=$utab["idc"];
         var_dump( $_SESSION["id"]);
-      header("location:../view/dashboard.php");
+      header("location:../../dashboard.php");
    }else 
    {
         

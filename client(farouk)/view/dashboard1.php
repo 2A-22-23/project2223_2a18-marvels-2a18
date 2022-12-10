@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION["email"]))
+{
+
  //include_once '../Model/Client.php';
  include_once '../Controller/ClientC.php';
  $client=new ClientC();
@@ -20,13 +24,13 @@ $list=$client->listClients();
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php">
                         <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
                         <span class="title">Marvels Auto</span>
                     </a>
                 </li>
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../../dashboard.php">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -85,13 +89,14 @@ $list=$client->listClients();
                                 <div class="recentorders">
                                     <div class="cardheader">
                                         <h2>client</h2>
-                                        <a href="addClient.php" class="btn">Ajouter</a>
-                                        <a href="searchclient.php" class="btn">Search</a>
+                                        <a href="addclientdashboard.php" class="btn">Ajouter</a>
+                                        <a href="searchclient1.php" class="btn">Search</a>
                                     </div>
                                     <table>
                                    
                                         <thead>
                                          <tr>
+                                         <td>Id</td>
                                          <td>Nom</td>
                                             <td>Prenom</td>
                                             <td>Email</td>
@@ -107,24 +112,24 @@ $list=$client->listClients();
                 foreach($list as $client) {
              ?>
                                         <tr>
+                                        <td> <?php echo $client['idc']; ?></td>
                                            <td> <?php echo $client['nom']; ?></td>
                                            <td> <?php echo $client['prenom']; ?></td>
-                                           <td> <?php echo $client['email']; ?></td>
-                                           <td> <?php echo $client['mdp']; ?></td>
+                                         <td> <?php echo $client['email']; ?></td>
+                                           <td> <?php echo $client['mdp']; ?></td> 
                                            <td> <?php echo $client['telephone']; ?></td>
                                         
                                            <td>
-                                            <form method="post" action="updateClient.php">
+                                            <form method="post" action="updateclientdashboard.php">
 						                     <input type="submit" class="btn modif" name="Modifier" value="Modifier">
 						                     <input type="hidden" value=<?PHP echo $client['idc']; ?> name="id">
 					                        </form>
                                           </td>
 
                                            <td> 
-                                           <form method="post" action="deleteClient.php">
-						                     <input type="submit" class="btn supp" name="Supprimer" value="Supprimer">
-						                     <input type="hidden" value=<?PHP echo $client['idc']; ?> name="id">
-					                        </form> 
+                                          
+                                            <button class="btn modif"> <a href="deleteClient.php?id=<?php echo $client['idc']; ?>">Supprimer</a></button>
+                                           
                                            </td>
                                            </tr>
                                            <?php
@@ -133,6 +138,7 @@ $list=$client->listClients();
                                     </tbody>
                                     </table>
                                 </div>
+                                
                                 
                           
 
@@ -163,3 +169,12 @@ $list=$client->listClients();
 </script>
 </body>
 </html>
+<?php
+}
+
+else
+{
+    echo "veuillez se connecter";
+    header('Location:../Code/login.php');
+}
+?>

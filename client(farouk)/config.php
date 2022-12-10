@@ -1,5 +1,5 @@
 <?php
-//farouk 
+
 class config
 {
     private static $pdo = null;
@@ -9,7 +9,7 @@ class config
         if (!isset(self::$pdo)) {
             try {
                 self::$pdo = new PDO(
-                    'mysql:host=localhost;dbname=user','root','',
+                    'mysql:host=localhost;dbname=marvels','root','',
                     [
                         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
@@ -22,3 +22,5 @@ class config
         return self::$pdo;
     }
 }
+
+

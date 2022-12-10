@@ -21,7 +21,7 @@ body {
   text-transform: uppercase;
   margin: 40px 0;
 }
-.inscription-form p {
+.inscription-form label {
   font-size: 20px;
   margin: 15px 0;
 }

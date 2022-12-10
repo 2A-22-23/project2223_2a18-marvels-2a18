@@ -21,7 +21,7 @@
     outline: none;
     border: none;
     text-decoration:none;
-    text-transform: capitalize; 
+   /*  text-transform: capitalize;  */
     transition: all .2s linear;
 } 
 .flotte {
@@ -590,7 +590,40 @@ padding:0 .5rem;
 }
 
 
-
+.inscription-form {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+  }
+  .inscription-form input {
+      font-size: 16px;
+      padding: 15px 10px;
+      width: 70%;
+      border: 1;
+      border-radius: 5px ;
+      border-color:rgb(36, 13, 13);
+      outline: none;
+    }
+    .inscription-form button {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0;
+      padding: 10px 15px;
+      width:50% ;
+      border: 1;
+      border-radius: 5px;
+      border-color: black;
+      background-color:red;
+      
+    }
+    .inscription-form button:hover {
+      color:red ;
+      background-color: black;
+     
+  
+    }
 
 
 
@@ -684,7 +717,76 @@ font-size: 2rem;
     }
 
 } 
+/*FATMA**********************************************************/
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.modal.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content{
+    background-color: white;
+    max-width: 90vw;
+    margin: auto;
+    flex: 1;
+    position: relative;
+}
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal-header{
+    padding-left: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-body{
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-footer{
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+.btn{
+    padding: 5px;
+    background-color: darkcyan;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-close{
+    background-color: red;
+}
+
+
+/*FATMA**********************************************************/
 
 
 

@@ -2,4 +2,4 @@
 include '../Controller/ClientC.php';
 $clientC = new ClientC();
 $clientC->deleteClient($_GET["id"]);
-header('Location:affclient.php');
+header('Location:dashboard1.php');

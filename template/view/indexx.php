@@ -121,6 +121,15 @@ $list = $categorieC->affichjointure(); //affichage avec jointure
                 <!--fin emna-->
    
     </section>
+    <section class="newsletter">
+    
+    <h3>Would you like to customize your car ?</h3>
+    <p>Please Mention your needs here , we will take it in consideration</p>
+
+   <form action="">
+        <input type="Needs" placeholder="enter here">
+        <input type="submit" value="enter">
+  
 <br><br>
         <br><br>
         <br><br>

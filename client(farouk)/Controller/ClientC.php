@@ -1,7 +1,7 @@
 <?php
 include '../config.php';
 include '../Model/Client.php';
-
+//dd
 class ClientC
 {
     public function listClients()

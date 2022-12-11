@@ -100,8 +100,9 @@ $list=$client->listClients();
                                          <td>Nom</td>
                                             <td>Prenom</td>
                                             <td>Email</td>
-                                            <td>Mot de passe</td>
+                                           <!--  <td>Mot de passe</td> -->
                                             <td>Telephone</td>
+                                            <td>Role</td>
                                             <td>Modifier</td>
                                             <td>Supprimer</td>
                                           </tr>
@@ -116,8 +117,9 @@ $list=$client->listClients();
                                            <td> <?php echo $client['nom']; ?></td>
                                            <td> <?php echo $client['prenom']; ?></td>
                                          <td> <?php echo $client['email']; ?></td>
-                                           <td> <?php echo $client['mdp']; ?></td> 
+                                         <!--   <td> <?php echo $client['mdp']; ?></td> --> 
                                            <td> <?php echo $client['telephone']; ?></td>
+                                           <td> <?php echo $client['idrolee']; ?></td>
                                         
                                            <td>
                                             <form method="post" action="updateclientdashboard.php">

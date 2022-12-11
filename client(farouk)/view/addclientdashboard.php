@@ -81,7 +81,7 @@ $list=$client->listClients();
 <p>Role:</p>
 <select name="idrole" id="idrole">
 <?php foreach ($l as $role ){?>
-     <option value="<?= $role['idrole']?>"><?= $role['idrole']?></option>
+     <option value="<?= $role['idrole']?>"><?= $role['role']?></option>
        <?php }?>
 </select>
 

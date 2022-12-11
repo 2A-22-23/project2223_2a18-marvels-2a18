@@ -18,7 +18,7 @@ public function Listerole()
     }
     public function Listerole1()
     {
-        $sql = "SELECT idrole FROM role";
+        $sql = "SELECT idrole,role FROM role";
         $db = config::getConnexion();
         try {
             $liste = $db->query($sql);
